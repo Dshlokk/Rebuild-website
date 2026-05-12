@@ -64,7 +64,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap",
       },
-      { rel: "icon", href: "https://github.com/Dshlokk/Rebuild-website/blob/217372617fcfd86906304655c1044ef8a0c33419/Faviconn.png" },
+      { rel: "icon", href: "https://github.com/Dshlokk/Rebuild-website/raw/217372617fcfd86906304655c1044ef8a0c33419/Faviconn.png" },
       { rel: "stylesheet", href: appCss },
     ],
   }),
