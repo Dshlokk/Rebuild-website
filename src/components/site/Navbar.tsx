@@ -17,13 +17,12 @@ export function Navbar() {
         scrolled ? "bg-cream/95 shadow-[0_1px_24px_rgba(45,74,45,0.08)]" : "bg-cream/85"
       } border-b border-sand/20`}
     >
-      <Link to="/" className="flex items-center gap-2.5 font-display text-xl tracking-[0.06em] text-forest">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-forest">
-          <svg viewBox="0 0 18 18" className="h-[18px] w-[18px] fill-cream">
-            <path d="M9 2C9 2 4 7 4 11a5 5 0 0010 0C14 7 9 2 9 2z" fillRule="evenodd" />
-          </svg>
-        </span>
-        {site.name}
+      <Link to="/" className="flex items-center gap-2.5">
+        <img 
+          src="/logo.png" 
+          alt={site.name} 
+          className="h-10 w-auto object-contain md:h-12"
+        />
       </Link>
 
       <div className="hidden items-center gap-9 md:flex">

@@ -6,7 +6,11 @@ export function Footer() {
     <footer className="bg-ink px-6 pb-8 pt-12 text-cream md:px-16">
       <div className="mb-10 grid grid-cols-1 gap-8 md:grid-cols-[1.5fr_1fr_1fr_1fr] md:gap-12">
         <div>
-          <div className="mb-3 font-display text-2xl text-cream">{site.name}</div>
+          <img 
+            src="/logo.png" 
+            alt={site.name} 
+            className="mb-4 h-10 w-auto object-contain brightness-0 invert"
+          />
           <p className="text-[0.78rem] leading-[1.7] text-ink-muted">
             An eco-luxury community at {site.project}, inspired by the Costa Rican way of life. IGBC Platinum
             Certified. {site.location}.
