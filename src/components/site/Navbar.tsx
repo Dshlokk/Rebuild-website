@@ -21,7 +21,7 @@ export function Navbar() {
         <img 
           src="/logo.png" 
           alt={site.name} 
-          className="h-5 w-auto object-contain"
+          className="h-20 w-auto object-contain"
         />
       </Link>
 
