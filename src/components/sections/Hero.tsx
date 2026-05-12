@@ -15,15 +15,25 @@ const badges = [
 
 export function Hero() {
   return (
-    <section
-      className="relative flex min-h-screen flex-col justify-end overflow-hidden px-6 pb-20 pt-32 md:px-16 md:pb-24"
-      style={{
-        backgroundImage:
-          "linear-gradient(to bottom, rgba(42,42,34,0.15) 0%, rgba(42,42,34,0.65) 100%), url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=80')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative flex min-h-screen flex-col justify-end overflow-hidden px-6 pb-20 pt-32 md:px-16 md:pb-24">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source
+            src="https://github.com/Dshlokk/Rebuild-website/raw/c912205e97807635c6512317a623b037ea56f8cf/Banner%20Video%20stiched.mp4"
+            type="video/mp4"
+          />
+        </video>
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-bottom from-black/15 to-black/65" />
+      </div>
+
       {/* leafy fringe top right */}
       <div className="pointer-events-none absolute right-0 top-20 z-[2] h-80 w-72 opacity-55">
         <svg viewBox="0 0 280 320" xmlns="http://www.w3.org/2000/svg">
