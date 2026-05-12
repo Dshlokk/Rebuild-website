@@ -81,25 +81,27 @@ export function Hero() {
         ))}
       </div>
 
-      <motion.p {...fadeUp(0)} className="text-[0.75rem] uppercase tracking-[0.22em] text-gold-light">
-        EarthAroma by Pura Vida Villas — Bengaluru
-      </motion.p>
-      <motion.h1
-        {...fadeUp(0.1)}
-        className="mt-5 max-w-[820px] font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[1.05] tracking-[-0.01em] text-white"
-      >
-        Where <em className="not-italic font-light text-gold-light italic">Pure Life</em>
-        <br />
-        meets Elevated Living
-      </motion.h1>
-      <motion.p {...fadeUp(0.22)} className="mt-7 max-w-md text-[1rem] font-light leading-[1.7] text-white/70">
-        An eco-luxury villa community inspired by the Costa Rican way of life. Biophilic design, lakeside serenity,
-        and world-class sustainability — built for those who seek more.
-      </motion.p>
-      <motion.div {...fadeUp(0.34)} className="mt-10 flex flex-wrap items-center gap-4">
-        <Link to="/gallery" className="btn-primary">Explore Villa</Link>
-        <Link to="/contact" className="btn-ghost">Get Full Brochure</Link>
-      </motion.div>
+      <div className="relative z-10">
+        <motion.p {...fadeUp(0)} className="text-[0.75rem] uppercase tracking-[0.22em] text-gold-light">
+          EarthAroma by Pura Vida Villas — Bengaluru
+        </motion.p>
+        <motion.h1
+          {...fadeUp(0.1)}
+          className="mt-5 max-w-[820px] font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[1.05] tracking-[-0.01em] text-white"
+        >
+          Where <em className="not-italic font-light text-gold-light italic">Pure Life</em>
+          <br />
+          meets Elevated Living
+        </motion.h1>
+        <motion.p {...fadeUp(0.22)} className="mt-7 max-w-md text-[1rem] font-light leading-[1.7] text-white/70">
+          An eco-luxury villa community inspired by the Costa Rican way of life. Biophilic design, lakeside serenity,
+          and world-class sustainability — built for those who seek more.
+        </motion.p>
+        <motion.div {...fadeUp(0.34)} className="mt-10 flex flex-wrap items-center gap-4">
+          <Link to="/gallery" className="btn-primary">Explore Villa</Link>
+          <Link to="/contact" className="btn-ghost">Get Full Brochure</Link>
+        </motion.div>
+      </div>
     </section>
   );
 }
