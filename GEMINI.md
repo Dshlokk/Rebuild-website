@@ -30,8 +30,22 @@ This project is built with **TanStack Start** (React 19), **Tailwind CSS 4**, an
 - Use `framer-motion` for animations.
 - Prefer Vanilla CSS in `src/styles.css` for global styles or complex custom animations that are hard to express in Tailwind.
 
-## Commands
-- `bun run dev`: Start development server.
-- `bun run build`: Build for production.
-- `bun run lint`: Run ESLint.
-- `bun run format`: Format code with Prettier.
+## Deployment
+
+### Cloudflare Pages (Default)
+This project is pre-configured for Cloudflare Pages.
+- **Build Command:** `bun run build`
+- **Output Directory:** `dist/client` (Static) and `dist/server` (Functions)
+- **Framework Preset:** TanStack Start / Vinxi (if available) or use the `wrangler.jsonc` configuration.
+
+### Vercel
+To deploy on Vercel, the configuration automatically switches to the Vercel preset when `process.env.VERCEL` is detected.
+- **Build Command:** `bun run build`
+- **Output Directory:** `.output` (Nitro default) or `dist/client` if static.
+- **Environment Variables:** Vercel automatically sets `VERCEL=1`, which triggers the Vercel-specific build in `vite.config.ts`.
+
+#### Steps for Vercel Deployment:
+1. Connect your repository to Vercel.
+2. Vercel should auto-detect the framework. If not, select **Other** or **Vite**.
+3. Ensure the build command is `bun run build`.
+4. If the build produces a `.output` directory, set that as the output directory in Vercel.
