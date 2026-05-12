@@ -81,7 +81,14 @@ function Contact() {
                 try {
                   await saveLead({ data });
                   setSubmitting("sent");
-                  window.open("https://github.com/Dshlokk/Rebuild-website/blob/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf", "_blank");
+                  
+                  // Trigger direct download
+                  const link = document.createElement("a");
+                  link.href = "https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf";
+                  link.download = "Pura-Vida-Villa-Brochure.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
                 } catch (error) {
                   console.error("Failed to save lead:", error);
                   setSubmitting("idle");
@@ -117,7 +124,8 @@ function Contact() {
               <div className="mt-4 rounded border border-forest/20 bg-forest/5 p-4 text-center">
                 <p className="text-sm text-forest">If your brochure didn't open automatically, click below:</p>
                 <a 
-                  href="https://github.com/Dshlokk/Rebuild-website/blob/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf" 
+                  href="https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf" 
+                  download="Pura-Vida-Villa-Brochure.pdf"
                   target="_blank" 
                   rel="noreferrer" 
                   className="mt-2 inline-block font-medium text-forest underline underline-offset-4"
