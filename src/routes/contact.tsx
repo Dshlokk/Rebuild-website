@@ -68,7 +68,10 @@ function Contact() {
               onSubmit={(e) => {
                 e.preventDefault();
                 setSubmitting("sending");
-                setTimeout(() => setSubmitting("sent"), 1300);
+                setTimeout(() => {
+                  setSubmitting("sent");
+                  window.open("https://github.com/Dshlokk/Rebuild-website/blob/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf", "_blank");
+                }, 1300);
               }}
             >
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -95,6 +98,19 @@ function Contact() {
                 {submitting === "sent" && "✓ Brochure Request Sent!"}
               </button>
             </form>
+            {submitting === "sent" && (
+              <div className="mt-4 rounded border border-forest/20 bg-forest/5 p-4 text-center">
+                <p className="text-sm text-forest">If your brochure didn't open automatically, click below:</p>
+                <a 
+                  href="https://github.com/Dshlokk/Rebuild-website/blob/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="mt-2 inline-block font-medium text-forest underline underline-offset-4"
+                >
+                  Download Brochure PDF →
+                </a>
+              </div>
+            )}
             <a href={site.whatsapp} target="_blank" rel="noreferrer" className="btn-outline-forest mt-4 block w-full text-center">
               Chat on WhatsApp
             </a>
