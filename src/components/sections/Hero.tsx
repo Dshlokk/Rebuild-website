@@ -26,7 +26,7 @@ export function Hero() {
           className="h-full w-full object-cover"
         >
           <source
-            src="https://github.com/Dshlokk/Rebuild-website/raw/c912205e97807635c6512317a623b037ea56f8cf/Banner%20Video%20stiched.mp4"
+            src="https://github.com/Dshlokk/Rebuild-website/raw/3caeef13924a2cb13c947fdfd01c3aeaff68a760/Banner%20Video%20stiched.mp4"
             type="video/mp4"
           />
         </video>
