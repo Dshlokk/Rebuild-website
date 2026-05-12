@@ -39,13 +39,13 @@ This project is pre-configured for Cloudflare Pages.
 - **Framework Preset:** TanStack Start / Vinxi (if available) or use the `wrangler.jsonc` configuration.
 
 ### Vercel
-To deploy on Vercel, the configuration automatically switches to the Vercel preset when `process.env.VERCEL` is detected.
+This project uses a custom Edge Function shim to support TanStack Start's SSR on Vercel.
 - **Build Command:** `bun run build`
-- **Output Directory:** `.output` (Nitro default) or `dist/client` if static.
-- **Environment Variables:** Vercel automatically sets `VERCEL=1`, which triggers the Vercel-specific build in `vite.config.ts`.
+- **Output Directory:** `dist/client`
+- **Configuration:** `vercel.json` routes non-asset requests to `api/index.js`, which runs the bundled server as an Edge Function.
 
 #### Steps for Vercel Deployment:
 1. Connect your repository to Vercel.
-2. Vercel should auto-detect the framework. If not, select **Other** or **Vite**.
-3. Ensure the build command is `bun run build`.
-4. If the build produces a `.output` directory, set that as the output directory in Vercel.
+2. Ensure the **Build Command** is `bun run build`.
+3. Ensure the **Output Directory** is set to `dist/client`.
+4. Vercel will automatically detect the `api/index.js` and `vercel.json` files.

@@ -10,7 +10,7 @@ const isCloudflare = !process.env.VERCEL && !process.env.NETLIFY && !process.env
 
 export default defineConfig({
   tanstackStart: {
-    ...(isCloudflare ? { server: { entry: "server" } } : { server: { preset: "vercel" } }),
+    server: { entry: "server" },
   },
   cloudflare: isCloudflare,
 });

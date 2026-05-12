@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(assets/.*)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/api/index"
+    }
+  ]
+}
