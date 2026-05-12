@@ -1,25 +1,35 @@
 import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
 
-// Replace this with your Google Apps Script Web App URL after deployment
-const GOOGLE_SCRIPT_URL = ""; 
+const leadSchema = z.object({
+  firstName: z.string(),
+  phone: z.string(),
+  email: z.string(),
+  type: z.string(),
+});
+
+// The URL you provided
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby7drsZvw4ClcDewtMQ6YGIrxWtOJDPWBAJqIllu9_zjoi9GTqymNC_6jkXqXldVp6s/exec"; 
 
 export const saveLead = createServerFn({ method: "POST" })
-  .validator((data: { firstName: string; phone: string; email: string; type: string }) => data)
-  .handler(async ({ data }) => {
+  .handler(async ({ data }: { data: any }) => {
+    // Validate inside the handler
+    const validatedData = leadSchema.parse(data);
+
     if (!GOOGLE_SCRIPT_URL) {
       console.warn("Google Script URL is not set. Lead not saved to Google Sheets.");
       return { success: true, warning: "URL_MISSING" };
     }
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycby7drsZvw4ClcDewtMQ6YGIrxWtOJDPWBAJqIllu9_zjoi9GTqymNC_6jkXqXldVp6s/exec", {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors", // Required for Google Apps Script redirects
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...data,
+          ...validatedData,
           date: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
         }),
       });
@@ -30,3 +40,4 @@ export const saveLead = createServerFn({ method: "POST" })
       throw error;
     }
   });
+

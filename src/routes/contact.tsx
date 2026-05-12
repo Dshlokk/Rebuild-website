@@ -95,7 +95,7 @@ function Contact() {
               </div>
               <Field label="Email Address"><input name="email" required type="email" placeholder="you@email.com" className={inputCls} /></Field>
               <Field label="I am a">
-                <select name="type" className={inputCls} defaultValue="">
+                <select name="type" required className={inputCls} defaultValue="">
                   <option value="" disabled>— Select —</option>
                   <option>End User / Buyer</option>
                   <option>Investor</option>
