@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { FloatIcons } from "@/components/site/FloatIcons";
+import { LeadPopup } from "@/components/site/LeadPopup";
 
 function NotFoundComponent() {
   return (
@@ -94,6 +95,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <Navbar />
       <FloatIcons />
+      <LeadPopup />
       <main className="min-h-screen">
         <Outlet />
       </main>
