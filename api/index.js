@@ -1,7 +1,10 @@
+import os from "node:os";
 import server from "../dist/server/server.js";
 
 export default async function handler(request) {
-  // TanStack Start's server.fetch expects (request, env, context)
-  // Vercel Node.js functions support the Web Request API.
+  // Explicitly using a Node-only module to prevent Vercel from assuming Edge runtime
+  const platform = os.platform();
+  console.log(`Handling request on ${platform}`);
+  
   return server.fetch(request, {}, {});
 }

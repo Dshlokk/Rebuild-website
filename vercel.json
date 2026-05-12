@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "framework": "vite",
+  "framework": null,
   "functions": {
-    "api/index.js": {
+    "api/**/*.js": {
       "runtime": "nodejs20.x"
     }
   },
   "rewrites": [
     {
       "source": "/(assets/.*)",
-      "destination": "/$1"
+      "destination": "/dist/client/$1"
     },
     {
       "source": "/((?!api/).*)",
