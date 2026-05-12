@@ -1,0 +1,150 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "DM Sans", sans-serif;
+
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-forest: var(--forest);
+  --color-forest-mid: var(--forest-mid);
+  --color-forest-light: var(--forest-light);
+  --color-forest-pale: var(--forest-pale);
+  --color-sand: var(--sand);
+  --color-sand-light: var(--sand-light);
+  --color-bark: var(--bark);
+  --color-earth: var(--earth);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-ink: var(--text);
+  --color-ink-mid: var(--text-mid);
+  --color-ink-muted: var(--text-muted);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Brand palette (Pura Vida Villas — EarthAroma) */
+  --cream: oklch(0.965 0.018 85);
+  --cream-dark: oklch(0.925 0.025 80);
+  --forest: oklch(0.38 0.06 145);
+  --forest-mid: oklch(0.48 0.08 145);
+  --forest-light: oklch(0.65 0.08 140);
+  --forest-pale: oklch(0.86 0.05 140);
+  --sand: oklch(0.74 0.06 75);
+  --sand-light: oklch(0.88 0.04 80);
+  --bark: oklch(0.5 0.06 65);
+  --earth: oklch(0.36 0.04 60);
+  --gold: oklch(0.66 0.11 80);
+  --gold-light: oklch(0.78 0.09 80);
+
+  --text: oklch(0.24 0.01 90);
+  --text-mid: oklch(0.45 0.01 90);
+  --text-muted: oklch(0.62 0.012 90);
+
+  --background: var(--cream);
+  --foreground: var(--text);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--text);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--text);
+  --primary: var(--forest);
+  --primary-foreground: var(--cream);
+  --secondary: var(--cream-dark);
+  --secondary-foreground: var(--forest);
+  --muted: var(--cream-dark);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--gold);
+  --accent-foreground: var(--cream);
+  --border: oklch(0.85 0.02 80);
+  --input: oklch(0.85 0.02 80);
+  --ring: var(--forest);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.98 0 0);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); }
+}
+
+@layer components {
+  .btn-primary {
+    background: var(--gold); color: #fff;
+    padding: 0.9rem 2rem; border: none; cursor: pointer;
+    font-family: var(--font-sans); font-size: 0.78rem;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    border-radius: 2px; transition: background 0.2s; text-decoration: none;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--bark); }
+  .btn-ghost {
+    background: transparent; color: #fff;
+    padding: 0.9rem 2rem; border: 1px solid rgba(255,255,255,0.45);
+    cursor: pointer; font-family: var(--font-sans);
+    font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
+    border-radius: 2px; transition: all 0.2s; text-decoration: none;
+    display: inline-block;
+  }
+  .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+  .btn-outline-forest {
+    background: transparent; color: var(--forest);
+    padding: 0.85rem 1.8rem; border: 1px solid var(--forest);
+    font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
+    border-radius: 2px; transition: all 0.2s; text-decoration: none;
+    display: inline-block; cursor: pointer;
+  }
+  .btn-outline-forest:hover { background: var(--forest); color: var(--cream); }
+
+  .section-label {
+    font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--forest-light); font-weight: 400; margin-bottom: 1rem;
+    display: inline-flex; align-items: center; gap: 0.7rem;
+  }
+  .section-label::before {
+    content: ''; width: 28px; height: 1px; background: currentColor;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 400; line-height: 1.15; color: var(--forest);
+  }
+  .section-title em { font-style: italic; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 28s linear infinite; }
