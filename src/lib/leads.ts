@@ -12,7 +12,7 @@ export const saveLead = createServerFn({ method: "POST" })
     }
 
     try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      const response = await fetch("https://script.google.com/macros/s/AKfycby7drsZvw4ClcDewtMQ6YGIrxWtOJDPWBAJqIllu9_zjoi9GTqymNC_6jkXqXldVp6s/exec", {
         method: "POST",
         mode: "no-cors", // Required for Google Apps Script redirects
         headers: {
