@@ -3,6 +3,7 @@ import { useState } from "react";
 import { PageHeader } from "@/components/site/SectionHeader";
 import { FadeUp } from "@/components/site/Motion";
 import { site } from "@/data/site";
+import { saveLead } from "@/lib/leads";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -65,22 +66,36 @@ function Contact() {
             </div>
             <form
               className="mt-6 space-y-4"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
                 setSubmitting("sending");
-                setTimeout(() => {
+                
+                const formData = new FormData(e.currentTarget);
+                const data = {
+                  firstName: formData.get("firstName") as string,
+                  phone: formData.get("phone") as string,
+                  email: formData.get("email") as string,
+                  type: formData.get("type") as string,
+                };
+
+                try {
+                  await saveLead({ data });
                   setSubmitting("sent");
                   window.open("https://github.com/Dshlokk/Rebuild-website/blob/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf", "_blank");
-                }, 1300);
+                } catch (error) {
+                  console.error("Failed to save lead:", error);
+                  setSubmitting("idle");
+                  alert("Something went wrong. Please try again.");
+                }
               }}
             >
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <Field label="First Name"><input required type="text" placeholder="Your name" className={inputCls} /></Field>
-                <Field label="Phone Number"><input required type="tel" placeholder="+91 00000 00000" className={inputCls} /></Field>
+                <Field label="First Name"><input name="firstName" required type="text" placeholder="Your name" className={inputCls} /></Field>
+                <Field label="Phone Number"><input name="phone" required type="tel" placeholder="+91 00000 00000" className={inputCls} /></Field>
               </div>
-              <Field label="Email Address"><input required type="email" placeholder="you@email.com" className={inputCls} /></Field>
+              <Field label="Email Address"><input name="email" required type="email" placeholder="you@email.com" className={inputCls} /></Field>
               <Field label="I am a">
-                <select className={inputCls} defaultValue="">
+                <select name="type" className={inputCls} defaultValue="">
                   <option value="" disabled>— Select —</option>
                   <option>End User / Buyer</option>
                   <option>Investor</option>
@@ -89,7 +104,7 @@ function Contact() {
                 </select>
               </Field>
               <label className="flex items-start gap-3 text-[0.75rem] leading-[1.5] text-ink-muted">
-                <input type="checkbox" defaultChecked className="mt-1" />
+                <input name="consent" required type="checkbox" defaultChecked className="mt-1" />
                 <span>I consent to being contacted by the Pura Vida Villas team via call or WhatsApp regarding this property.</span>
               </label>
               <button type="submit" className="btn-primary w-full text-center" disabled={submitting !== "idle"}>
