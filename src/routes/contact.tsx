@@ -37,12 +37,20 @@ function Contact() {
                 Eartharoma Lakefront Community →
               </a>
             </div>
+            <div>
+              <div className="section-label">WhatsApp</div>
+              <a href={site.whatsapp} target="_blank" rel="noreferrer" className="font-display text-xl text-forest underline-offset-4 hover:underline">
+                Chat with our team →
+              </a>
+            </div>
             <div className="overflow-hidden rounded border border-cream-dark">
               <iframe
                 title="Map"
-                src="https://maps.app.goo.gl/LtY4oepYw8djimsz9"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15535.13824905211!2d77.6710484!3d13.2505504!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1da93f9c314b%3A0x6b3f7e6e5a6f8b8a!2sEarthAroma!5e0!3m2!1sen!2sin!4v1715616000000!5m2!1sen!2sin"
                 className="h-72 w-full"
                 loading="lazy"
+                style={{ border: 0 }}
+                allowFullScreen
               />
             </div>
           </FadeUp>
