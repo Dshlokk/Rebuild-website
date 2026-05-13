@@ -34,19 +34,13 @@ function Contact() {
             <div>
               <div className="section-label">Location</div>
               <a href={site.maps} target="_blank" rel="noreferrer" className="font-display text-xl text-forest underline-offset-4 hover:underline">
-                EarthAroma — Bengaluru →
-              </a>
-            </div>
-            <div>
-              <div className="section-label">WhatsApp</div>
-              <a href={site.whatsapp} target="_blank" rel="noreferrer" className="font-display text-xl text-forest underline-offset-4 hover:underline">
-                Chat with our team →
+                Eartharoma Lakefront Community →
               </a>
             </div>
             <div className="overflow-hidden rounded border border-cream-dark">
               <iframe
                 title="Map"
-                src="https://www.google.com/maps?q=Bengaluru&output=embed"
+                src="https://www.google.com/maps?q=Pura+Vida+Villas+at+Eartharoma+Lakefront+community&output=embed"
                 className="h-72 w-full"
                 loading="lazy"
               />
