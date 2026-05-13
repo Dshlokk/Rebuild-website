@@ -1,8 +1,8 @@
 export const floorPlans = [
-  { name: "Ground Floor", img: "/images/EA-Villa-Brochure-3_page-0010.jpg" },
-  { name: "Ground Floor Option 2", img: "/images/EA-Villa-Brochure-3_page-0011.jpg" },
-  { name: "First Floor", img: "/images/EA-Villa-Brochure-3_page-0012.jpg" },
-  { name: "Second Floor", img: "/images/EA-Villa-Brochure-3_page-0013.jpg" },
+  { name: "Ground Floor", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0010.jpg" },
+  { name: "Ground Floor Option 2", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0011.jpg" },
+  { name: "First Floor", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0012.jpg" },
+  { name: "Second Floor", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0013.jpg" },
 ];
 
 export const specPreview = [
