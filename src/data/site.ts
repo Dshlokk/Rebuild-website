@@ -1,12 +1,12 @@
 export const site = {
   name: "Pura Vida Villas",
   project: "EarthAroma",
-  location: "Bengaluru",
-  phone: "+91 79963 37979",
-  phoneHref: "tel:+917996337979",
-  whatsapp: "https://wa.me/917996337979",
-  maps: "https://maps.app.goo.gl/JyDjAcEwZ7acriySA",
-  tagline: "An eco-luxury villa community inspired by the Costa Rican way of life.",
+  location: "IVC Rd, Devanahalli",
+  phone: "+91 98456 85226",
+  phoneHref: "tel:+919845685226",
+  whatsapp: "https://wa.me/919845685226?text=I'm%20interested%20in%20your%20Property",
+  maps: "https://maps.app.goo.gl/LtY4oepYw8djimsz9",
+  tagline: "Pura Vida Villas at Eartharoma Lakefront community, IVC Rd, Devanahalli",
 };
 
 export const navLinks = [
