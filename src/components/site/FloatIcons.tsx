@@ -20,28 +20,27 @@ const items = [
 
 export function FloatIcons() {
   return (
-    <div className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col overflow-hidden rounded-l-xl border border-r-0 border-sand/30 bg-white shadow-[-4px_0_28px_rgba(45,74,45,0.10)] md:flex">
+    <div className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col overflow-hidden rounded-l-[20px] border border-r-0 border-white/40 bg-white/45 shadow-[-4px_8px_24px_rgba(0,0,0,0.08)] backdrop-blur-[16px] backdrop-saturate-[180%] md:flex">
       {items.map((it) => (
         <a
           key={it.label}
           href={it.href}
           target={it.ext ? "_blank" : undefined}
           rel={it.ext ? "noreferrer" : undefined}
-          className="group relative flex h-14 w-14 flex-col items-center justify-center gap-[3px] border-b border-sand/15 transition-colors last:border-b-0 hover:bg-forest"
+          className="group relative flex h-[72px] w-[64px] flex-col items-center justify-center gap-1.5 border-b border-white/20 transition-all last:border-b-0 hover:bg-white/20"
           title={it.label}
         >
-          <span className="absolute left-0 top-[20%] bottom-[20%] w-0.5 rounded-r bg-gold opacity-0 transition-opacity group-hover:opacity-100" />
           <svg
             viewBox="0 0 24 24"
-            className="h-[18px] w-[18px] stroke-forest transition-colors group-hover:stroke-cream"
+            className="h-5 w-5 stroke-[#2c4c3b] transition-transform duration-300 group-hover:scale-110"
             fill="none"
-            strokeWidth="1.6"
+            strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
             <path d={it.d} />
           </svg>
-          <span className="text-[0.52rem] uppercase tracking-[0.08em] text-ink-muted transition-colors group-hover:text-cream">
+          <span className="text-[0.62rem] font-medium uppercase tracking-[0.05em] text-[#2c4c3b]/90 transition-colors">
             {it.label}
           </span>
         </a>

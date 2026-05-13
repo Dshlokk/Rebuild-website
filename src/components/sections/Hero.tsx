@@ -24,9 +24,9 @@ export function Hero() {
             type="video/mp4"
           />
         </video>
-        {/* Overlay for readability - stronger on mobile */}
-        <div className="absolute inset-0 bg-black/40 md:bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30 md:from-black/70 md:via-transparent md:to-black/20" />
+        {/* Overlay for readability - significantly darkened for PC and Mobile */}
+        <div className="absolute inset-0 bg-black/50 md:bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/40 md:from-black/80 md:via-black/20 md:to-black/30" />
       </div>
 
       {/* leafy fringe top right */}
@@ -161,13 +161,13 @@ export function Hero() {
       <div className="relative z-10">
         <motion.p
           {...fadeUp(0)}
-          className="text-[0.75rem] uppercase tracking-[0.22em] text-gold-light"
+          className="text-[0.75rem] uppercase tracking-[0.22em] text-gold-light [text-shadow:0_1px_4px_rgba(0,0,0,0.3)]"
         >
           It's Pura Vida Villas at Eartharoma Lakefront community, IVC Rd, Devanahalli
         </motion.p>
         <motion.h1
           {...fadeUp(0.1)}
-          className="mt-5 max-w-[820px] font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[1.05] tracking-[-0.01em] text-white"
+          className="mt-5 max-w-[820px] font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[1.05] tracking-[-0.01em] text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.3)]"
         >
           Where <em className="not-italic font-light text-gold-light italic">Pure Life</em>
           <br />
@@ -175,7 +175,7 @@ export function Hero() {
         </motion.h1>
         <motion.p
           {...fadeUp(0.22)}
-          className="mt-7 max-w-md text-[1rem] font-light leading-[1.7] text-white/70"
+          className="mt-7 max-w-md text-[1rem] font-light leading-[1.7] text-white/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.3)]"
         >
           An eco-luxury villa community inspired by the Costa Rican way of life. Biophilic design,
           lakeside serenity, and world-class sustainability — built for those who seek more.
