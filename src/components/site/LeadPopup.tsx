@@ -9,17 +9,13 @@ export function LeadPopup() {
   const [submitting, setSubmitting] = useState<"idle" | "sending" | "sent">("idle");
 
   useEffect(() => {
-    // Show popup after 3 seconds if not already shown/submitted
-    const hasShown = localStorage.getItem("lead-popup-shown");
-    if (!hasShown) {
-      const timer = setTimeout(() => setIsOpen(true), 3000);
-      return () => clearTimeout(timer);
-    }
+    // Show popup after 3 seconds on every mount
+    const timer = setTimeout(() => setIsOpen(true), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   const closePopup = () => {
     setIsOpen(false);
-    localStorage.setItem("lead-popup-shown", "true");
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -40,7 +36,8 @@ export function LeadPopup() {
 
       // Trigger direct download
       const link = document.createElement("a");
-      link.href = "https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf";
+      link.href =
+        "https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf";
       link.download = "Pura-Vida-Villa-Brochure.pdf";
       document.body.appendChild(link);
       link.click();
@@ -82,9 +79,14 @@ export function LeadPopup() {
 
             <div className="p-8 md:p-10">
               <div className="section-label">Limited Opportunity</div>
-              <h3 className="font-display text-3xl text-forest mt-2">Get the Exclusive<br />Brochure Pack</h3>
+              <h3 className="font-display text-3xl text-forest mt-2">
+                Get the Exclusive
+                <br />
+                Brochure Pack
+              </h3>
               <p className="mt-3 text-[0.85rem] leading-[1.6] text-ink-muted">
-                Join our priority list to receive the latest pricing, availability, and detailed floor plans instantly.
+                Join our priority list to receive the latest pricing, availability, and detailed
+                floor plans instantly.
               </p>
 
               {submitting === "sent" ? (
@@ -92,21 +94,23 @@ export function LeadPopup() {
                   <div className="text-4xl mb-4">✅</div>
                   <h4 className="font-display text-2xl text-forest">Thank You!</h4>
                   <p className="text-sm text-ink-muted mt-2">Your request has been received.</p>
-                  
+
                   <div className="mt-6 rounded border border-forest/20 bg-forest/5 p-4">
-                    <p className="text-[0.75rem] text-forest">If your brochure didn't download automatically, click below:</p>
-                    <a 
-                      href="https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf" 
+                    <p className="text-[0.75rem] text-forest">
+                      If your brochure didn't download automatically, click below:
+                    </p>
+                    <a
+                      href="https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf"
                       download="Pura-Vida-Villa-Brochure.pdf"
-                      target="_blank" 
-                      rel="noreferrer" 
+                      target="_blank"
+                      rel="noreferrer"
                       className="mt-2 inline-block text-[0.8rem] font-medium text-forest underline underline-offset-4"
                     >
                       Download Brochure PDF →
                     </a>
                   </div>
 
-                  <button 
+                  <button
                     onClick={closePopup}
                     className="mt-6 text-[0.7rem] uppercase tracking-widest text-ink-muted hover:text-forest transition-colors"
                   >
@@ -116,13 +120,39 @@ export function LeadPopup() {
               ) : (
                 <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                    <Field label="First Name"><input name="firstName" required type="text" placeholder="Your name" className={inputCls} /></Field>
-                    <Field label="Phone Number"><input name="phone" required type="tel" placeholder="+91 00000 00000" className={inputCls} /></Field>
+                    <Field label="First Name">
+                      <input
+                        name="firstName"
+                        required
+                        type="text"
+                        placeholder="Your name"
+                        className={inputCls}
+                      />
+                    </Field>
+                    <Field label="Phone Number">
+                      <input
+                        name="phone"
+                        required
+                        type="tel"
+                        placeholder="+91 00000 00000"
+                        className={inputCls}
+                      />
+                    </Field>
                   </div>
-                  <Field label="Email Address"><input name="email" required type="email" placeholder="you@email.com" className={inputCls} /></Field>
+                  <Field label="Email Address">
+                    <input
+                      name="email"
+                      required
+                      type="email"
+                      placeholder="you@email.com"
+                      className={inputCls}
+                    />
+                  </Field>
                   <Field label="I am a">
                     <select name="type" required className={inputCls} defaultValue="">
-                      <option value="" disabled>— Select —</option>
+                      <option value="" disabled>
+                        — Select —
+                      </option>
                       <option>End User / Buyer</option>
                       <option>Investor</option>
                       <option>NRI Buyer</option>
@@ -130,10 +160,23 @@ export function LeadPopup() {
                     </select>
                   </Field>
                   <label className="flex items-start gap-3 text-[0.7rem] leading-[1.5] text-ink-muted">
-                    <input name="consent" required type="checkbox" defaultChecked className="mt-1" />
-                    <span>I consent to being contacted by the Pura Vida Villas team via call or WhatsApp.</span>
+                    <input
+                      name="consent"
+                      required
+                      type="checkbox"
+                      defaultChecked
+                      className="mt-1"
+                    />
+                    <span>
+                      I consent to being contacted by the Pura Vida Villas team via call or
+                      WhatsApp.
+                    </span>
                   </label>
-                  <button type="submit" className="btn-primary w-full text-center" disabled={submitting !== "idle"}>
+                  <button
+                    type="submit"
+                    className="btn-primary w-full text-center"
+                    disabled={submitting !== "idle"}
+                  >
                     {submitting === "idle" && "Get Instant Access →"}
                     {submitting === "sending" && "✓ Sending…"}
                   </button>
@@ -153,7 +196,9 @@ const inputCls =
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <label className="mb-1 block text-[0.65rem] uppercase tracking-[0.1em] text-ink-mid">{label}</label>
+      <label className="mb-1 block text-[0.65rem] uppercase tracking-[0.1em] text-ink-mid">
+        {label}
+      </label>
       {children}
     </div>
   );
