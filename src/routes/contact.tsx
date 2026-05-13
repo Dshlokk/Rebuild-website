@@ -40,7 +40,7 @@ function Contact() {
             <div className="overflow-hidden rounded border border-cream-dark">
               <iframe
                 title="Map"
-                src="https://www.google.com/maps?q=Pura+Vida+Villas+at+Eartharoma+Lakefront+community&output=embed"
+                src="https://maps.app.goo.gl/LtY4oepYw8djimsz9"
                 className="h-72 w-full"
                 loading="lazy"
               />
