@@ -5,7 +5,7 @@ export const site = {
   phone: "+91 98456 85226",
   phoneHref: "tel:+919845685226",
   whatsapp: "https://wa.me/919845685226?text=I'm%20interested%20in%20your%20Property",
-  maps: "https://maps.app.goo.gl/LtY4oepYw8djimsz9",
+  maps: "https://maps.app.goo.gl/XWZDDm3UsXL1squw7",
   tagline: "Pura Vida Villas at Eartharoma Lakefront community, IVC Rd, Devanahalli",
 };
 

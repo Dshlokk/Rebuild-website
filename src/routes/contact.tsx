@@ -46,7 +46,7 @@ function Contact() {
             <div className="overflow-hidden rounded border border-cream-dark">
               <iframe
                 title="Map"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15535.13824905211!2d77.6710484!3d13.2505504!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1da93f9c314b%3A0x6b3f7e6e5a6f8b8a!2sEarthAroma!5e0!3m2!1sen!2sin!4v1715616000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.6558485239!2d77.5953988!3d13.226119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1f5d41d61d4f%3A0xa1cd8661d5bd05e4!2sEarth%20Aroma!5e0!3m2!1sen!2sin!4v1715617000000!5m2!1sen!2sin"
                 className="h-72 w-full"
                 loading="lazy"
                 style={{ border: 0 }}
