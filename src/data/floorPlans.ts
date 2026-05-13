@@ -1,8 +1,8 @@
 export const floorPlans = [
-  { name: "Ground Floor", img: "https://puravidavillas.com/wp-content/uploads/2025/11/PurVida-Floor-PLan1-1024x574.png" },
-  { name: "Site Plan", img: "https://puravidavillas.com/wp-content/uploads/2025/11/PurVida-Floor-PLan2-1024x574.png" },
-  { name: "First Floor", img: "https://puravidavillas.com/wp-content/uploads/2025/11/PurVida-Floor-PLanFirst-Floor-1024x574.png" },
-  { name: "Second Floor", img: "https://puravidavillas.com/wp-content/uploads/2025/11/PurVida-Floor-PLan-Second-Floor-1024x574.png" },
+  { name: "Ground Floor", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0010.jpg" },
+  { name: "Ground Floor Option 2", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0011.jpg" },
+  { name: "First Floor", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0012.jpg" },
+  { name: "Second Floor", img: "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/EA-Villa-Brochure-3_page-0013.jpg" },
 ];
 
 export const specPreview = [
