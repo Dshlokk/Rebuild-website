@@ -34,7 +34,7 @@ function Index() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
           <FadeUp className="relative h-[380px] sm:h-[450px] md:h-[520px]">
             <img
-              src="https://github.com/Dshlokk/Rebuild-website/raw/5b6d9ac2b29288d9a2cc23bb7164cb24dd2aa458/PURA%20VIDA%20ELEVATION.jpg.jpeg"
+              src="/images/pura-vida-elevation.jpg"
               alt="Pura Vida villa"
               className="absolute right-0 top-0 h-[82%] w-[80%] rounded object-cover shadow-lg"
             />

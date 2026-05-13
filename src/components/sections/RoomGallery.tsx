@@ -37,36 +37,53 @@ export function RoomGallery() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="grid grid-cols-1 gap-3 md:grid-cols-[1.4fr_1fr]"
+          className={`grid grid-cols-1 gap-3 ${
+            room.imgs.length > 1 ? "md:grid-cols-[1.4fr_1fr]" : ""
+          }`}
         >
-          <button
-            onClick={() => setLightbox(room.imgs[0])}
-            className="overflow-hidden rounded-[4px]"
-          >
-            <img
-              src={room.imgs[0]}
-              alt={room.name}
-              className="h-[480px] w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.03]"
-            />
-          </button>
-          <div className="grid grid-rows-2 gap-3">
-            {[room.imgs[1], room.imgs[2]].map((src) => (
-              <button
-                key={src}
-                onClick={() => setLightbox(src)}
-                className="overflow-hidden rounded-[4px]"
-              >
-                <img
-                  src={src}
-                  alt={room.name}
-                  className="h-[230px] w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.04]"
-                />
-              </button>
-            ))}
-          </div>
+          {room.imgs.length > 0 && (
+            <button
+              onClick={() => setLightbox(room.imgs[0])}
+              className="overflow-hidden rounded-[4px]"
+            >
+              <img
+                src={room.imgs[0]}
+                alt={room.name}
+                className={`${
+                  room.imgs.length === 1 ? "h-[500px]" : "h-[480px]"
+                } w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.03]`}
+              />
+            </button>
+          )}
+
+          {room.imgs.length > 1 && (
+            <div
+              className={`grid gap-3 ${
+                room.imgs.length === 3 ? "grid-rows-2" : "grid-rows-1"
+              }`}
+            >
+              {room.imgs.slice(1).map((src) => (
+                <button
+                  key={src}
+                  onClick={() => setLightbox(src)}
+                  className="overflow-hidden rounded-[4px]"
+                >
+                  <img
+                    src={src}
+                    alt={room.name}
+                    className={`${
+                      room.imgs.length === 2 ? "h-[480px]" : "h-[230px]"
+                    } w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.04]`}
+                  />
+                </button>
+              ))}
+            </div>
+          )}
           <div className="md:col-span-2 mt-6">
             <h3 className="font-display text-2xl text-forest">{room.sub}</h3>
-            <p className="mt-2 max-w-3xl text-[0.9rem] leading-[1.75] text-ink-mid">{room.body}</p>
+            <p className="mt-2 max-w-3xl text-[0.9rem] leading-[1.75] text-ink-mid">
+              {room.body}
+            </p>
           </div>
         </motion.div>
       </AnimatePresence>

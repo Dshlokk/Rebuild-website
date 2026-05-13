@@ -19,10 +19,7 @@ export function Hero() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="h-full w-full object-cover">
-          <source
-            src="https://github.com/Dshlokk/Rebuild-website/raw/8affd7f254a7334002f185be3d003da473760bdf/Banner%20Video%20stiched.mp4"
-            type="video/mp4"
-          />
+          <source src="/videos/banner-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay for readability - significantly darkened for PC and Mobile */}
         <div className="absolute inset-0 bg-black/50 md:bg-black/45" />
