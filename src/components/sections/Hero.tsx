@@ -163,7 +163,7 @@ export function Hero() {
           {...fadeUp(0)}
           className="text-[0.75rem] uppercase tracking-[0.22em] text-gold-light"
         >
-          EarthAroma by Pura Vida Villas — Bengaluru
+          It's Pura Vida Villas at Eartharoma Lakefront community, IVC Rd, Devanahalli
         </motion.p>
         <motion.h1
           {...fadeUp(0.1)}
