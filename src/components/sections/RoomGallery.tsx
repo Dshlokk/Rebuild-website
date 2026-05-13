@@ -14,13 +14,15 @@ export function RoomGallery() {
         #Elevated<em>Living</em>
       </h2>
 
-      <div className="mb-10 flex flex-wrap gap-0 border-b border-cream-dark">
+      <div className="mb-10 flex flex-nowrap gap-0 overflow-x-auto border-b border-cream-dark pb-px scrollbar-hide">
         {rooms.map((r, i) => (
           <button
             key={r.name}
             onClick={() => setActive(i)}
-            className={`border-b-2 px-5 py-3 text-[0.75rem] uppercase tracking-[0.14em] transition-colors ${
-              i === active ? "border-forest text-forest" : "border-transparent text-ink-muted hover:text-forest"
+            className={`flex-shrink-0 border-b-2 px-5 py-3 text-[0.75rem] uppercase tracking-[0.14em] transition-colors ${
+              i === active
+                ? "border-forest text-forest"
+                : "border-transparent text-ink-muted hover:text-forest"
             }`}
           >
             {r.name}
@@ -37,13 +39,28 @@ export function RoomGallery() {
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="grid grid-cols-1 gap-3 md:grid-cols-[1.4fr_1fr]"
         >
-          <button onClick={() => setLightbox(room.imgs[0])} className="overflow-hidden rounded-[4px]">
-            <img src={room.imgs[0]} alt={room.name} className="h-[480px] w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.03]" />
+          <button
+            onClick={() => setLightbox(room.imgs[0])}
+            className="overflow-hidden rounded-[4px]"
+          >
+            <img
+              src={room.imgs[0]}
+              alt={room.name}
+              className="h-[480px] w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.03]"
+            />
           </button>
           <div className="grid grid-rows-2 gap-3">
             {[room.imgs[1], room.imgs[2]].map((src) => (
-              <button key={src} onClick={() => setLightbox(src)} className="overflow-hidden rounded-[4px]">
-                <img src={src} alt={room.name} className="h-[230px] w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.04]" />
+              <button
+                key={src}
+                onClick={() => setLightbox(src)}
+                className="overflow-hidden rounded-[4px]"
+              >
+                <img
+                  src={src}
+                  alt={room.name}
+                  className="h-[230px] w-full cursor-zoom-in object-cover transition-transform duration-700 hover:scale-[1.04]"
+                />
               </button>
             ))}
           </div>
