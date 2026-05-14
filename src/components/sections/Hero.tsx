@@ -18,7 +18,15 @@ export function Hero() {
     <section className="relative flex min-h-screen flex-col justify-end overflow-hidden px-6 pb-20 pt-32 md:px-16 md:pb-24">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <video autoPlay muted loop playsInline className="h-full w-full object-cover">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="https://github.com/Dshlokk/Rebuild-website/raw/5b6d9ac2b29288d9a2cc23bb7164cb24dd2aa458/PURA%20VIDA%20ELEVATION.jpg.jpeg"
+          className="h-full w-full object-cover"
+        >
           <source
             src="https://github.com/Dshlokk/Rebuild-website/raw/8affd7f254a7334002f185be3d003da473760bdf/Banner%20Video%20stiched.mp4"
             type="video/mp4"

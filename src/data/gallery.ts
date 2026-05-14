@@ -13,7 +13,6 @@ export const rooms: Room[] = [
     imgs: [
       "https://github.com/Dshlokk/Rebuild-website/raw/19c439880b9ca7c4a16335a5682992ff0a0bbff2/Images%20from%20pdf/16.jpg",
       "https://github.com/Dshlokk/Rebuild-website/raw/19c439880b9ca7c4a16335a5682992ff0a0bbff2/Images%20from%20pdf/17.jpg",
-      "https://github.com/Dshlokk/Rebuild-website/raw/19c439880b9ca7c4a16335a5682992ff0a0bbff2/Images%20from%20pdf/15.png",
     ],
   },
   {
@@ -32,7 +31,6 @@ export const rooms: Room[] = [
     body: "Designed to feel bright, fresh, and wonderfully effortless. Sunlight streams through thoughtfully placed windows, creating a warm, inviting space where cooking becomes calming and joyful.",
     imgs: [
       "https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/18.jpg",
-      "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/6.png",
     ],
   },
   {
@@ -42,7 +40,6 @@ export const rooms: Room[] = [
     imgs: [
       "https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/19.jpg",
       "https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/27.png",
-      "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/4.png",
     ],
   },
   {
@@ -51,7 +48,6 @@ export const rooms: Room[] = [
     body: "A breathtaking escape — elevated, open, and alive with serenity. Calming water bodies reflect the sky, lush green landscapes stretch around you. A space made for sunrise rituals and starlit evenings.",
     imgs: [
       "https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/24.jpg",
-      "https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/25.jpg",
     ],
   },
   {
@@ -60,7 +56,6 @@ export const rooms: Room[] = [
     body: "Lush green landscapes set the scene. A cozy swing invites slow moments, the fire pit sparks warm conversations, and the gentle water body adds pure serenity.",
     imgs: [
       "https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/20.jpg",
-      "https://github.com/Dshlokk/Rebuild-website/raw/d735bb8b6917676570b9403077c07d9dbdbfa6f3/Images%20from%20pdf/31.png",
     ],
   },
 ];

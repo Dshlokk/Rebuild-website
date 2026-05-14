@@ -44,6 +44,18 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+function PendingComponent() {
+  return (
+    <div className="fixed inset-0 z-[100] flex min-h-screen items-center justify-center bg-cream backdrop-blur-md">
+      <img
+        src="/logo.png"
+        alt="Loading..."
+        className="h-24 w-auto animate-pulse object-contain opacity-80"
+      />
+    </div>
+  );
+}
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -71,6 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   }),
   shellComponent: RootShell,
   component: RootComponent,
+  pendingComponent: PendingComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
