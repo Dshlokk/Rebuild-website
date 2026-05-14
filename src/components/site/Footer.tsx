@@ -29,9 +29,9 @@ export function Footer() {
           { label: "Contact", to: "/contact" },
         ]} />
         <FooterCol title="Legal" links={[
-          { label: "Privacy Policy", to: "/contact" },
-          { label: "Terms of Use", to: "/contact" },
-          { label: "Disclaimer", to: "/contact" },
+          { label: "Privacy Policy", to: "/privacy" },
+          { label: "Terms of Use", to: "/terms" },
+          { label: "Disclaimer", to: "/disclaimer" },
         ]} />
       </div>
       <div className="flex flex-col items-start justify-between gap-2 border-t border-white/10 pt-6 text-[0.7rem] text-ink-muted md:flex-row md:items-center">
