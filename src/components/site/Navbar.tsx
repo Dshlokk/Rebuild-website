@@ -17,12 +17,15 @@ export function Navbar() {
         scrolled ? "bg-cream/95 shadow-[0_1px_24px_rgba(45,74,45,0.08)]" : "bg-cream/85"
       } border-b border-sand/20`}
     >
-      <Link to="/" className="flex items-center gap-2.5">
+      <Link to="/" className="flex flex-col items-center gap-0">
         <img 
           src="/logo.png" 
           alt={site.name} 
-          className="h-20 w-auto object-contain"
+          className="h-16 w-auto object-contain md:h-20"
         />
+        <span className="text-[0.55rem] uppercase tracking-[0.2em] text-gold/80 -mt-1 font-medium">
+          [Official Website]
+        </span>
       </Link>
 
       <div className="hidden items-center gap-9 md:flex">
