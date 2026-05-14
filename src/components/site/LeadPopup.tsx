@@ -37,7 +37,7 @@ export function LeadPopup() {
       // Trigger direct download
       const link = document.createElement("a");
       link.href =
-        "https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf";
+        "https://github.com/Dshlokk/Rebuild-website/raw/e6e1b44fa9575edff3da4f31bb4f05a46668f2e6/EA-Villa-Brochure-3.pdf";
       link.download = "Pura-Vida-Villa-Brochure.pdf";
       document.body.appendChild(link);
       link.click();
@@ -100,7 +100,7 @@ export function LeadPopup() {
                       If your brochure didn't download automatically, click below:
                     </p>
                     <a
-                      href="https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf"
+                      href="https://github.com/Dshlokk/Rebuild-website/raw/e6e1b44fa9575edff3da4f31bb4f05a46668f2e6/EA-Villa-Brochure-3.pdf"
                       download="Pura-Vida-Villa-Brochure.pdf"
                       target="_blank"
                       rel="noreferrer"

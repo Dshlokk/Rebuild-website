@@ -16,9 +16,9 @@ export function ContactBar() {
         <div className="flex flex-wrap gap-8">
           <ContactItem label="Sales Office" link={site.phone} href={site.phoneHref} />
           <ContactItem label="Location" link="Get Directions" href={site.maps} ext />
-          <ContactItem label="Site Visits" link="Book a Tour" to="/contact" />
+          <ContactItem label="Site Visits" link="Book a Tour" href="https://calendar.app.google/pEEdvnExZgn9kFkJ8" ext />
         </div>
-        <Link to="/contact" className="btn-primary">Schedule a Site Visit</Link>
+        <a href="https://calendar.app.google/pEEdvnExZgn9kFkJ8" target="_blank" rel="noreferrer" className="btn-primary">Schedule a Site Visit</a>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const items = [
   { href: "/gallery", label: "Gallery", d: icons.gallery },
   { href: "/contact", label: "Brochure", d: icons.brochure },
   { href: site.whatsapp, label: "WhatsApp", d: icons.whatsapp, ext: true },
-  { href: "/contact", label: "Visit", d: icons.visit },
+  { href: "https://calendar.app.google/pEEdvnExZgn9kFkJ8", label: "Visit", d: icons.visit, ext: true },
 ];
 
 export function FloatIcons() {

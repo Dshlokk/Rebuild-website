@@ -86,7 +86,7 @@ function Contact() {
                   
                   // Trigger direct download
                   const link = document.createElement("a");
-                  link.href = "https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf";
+                  link.href = "https://github.com/Dshlokk/Rebuild-website/raw/e6e1b44fa9575edff3da4f31bb4f05a46668f2e6/EA-Villa-Brochure-3.pdf";
                   link.download = "Pura-Vida-Villa-Brochure.pdf";
                   document.body.appendChild(link);
                   link.click();
@@ -126,7 +126,7 @@ function Contact() {
               <div className="mt-4 rounded border border-forest/20 bg-forest/5 p-4 text-center">
                 <p className="text-sm text-forest">If your brochure didn't open automatically, click below:</p>
                 <a 
-                  href="https://github.com/Dshlokk/Rebuild-website/raw/25f762387a0e26bdd249ada4b78f8d3eceff13ad/EA-Villa-Brochure-3.pdf" 
+                  href="https://github.com/Dshlokk/Rebuild-website/raw/e6e1b44fa9575edff3da4f31bb4f05a46668f2e6/EA-Villa-Brochure-3.pdf" 
                   download="Pura-Vida-Villa-Brochure.pdf"
                   target="_blank" 
                   rel="noreferrer" 
@@ -139,6 +139,36 @@ function Contact() {
             <a href={site.whatsapp} target="_blank" rel="noreferrer" className="btn-outline-forest mt-4 block w-full text-center">
               Chat on WhatsApp
             </a>
+          </FadeUp>
+        </div>
+      </section>
+      <section className="bg-cream/30 border-t border-cream-dark px-6 py-20 md:px-16">
+        <div className="mx-auto max-w-6xl text-center">
+          <FadeUp>
+            <div className="section-label mx-auto">Visit Us</div>
+            <h2 className="section-title mt-4">Experience Pura Vida <em>in Person</em></h2>
+            <p className="mx-auto mt-4 max-w-2xl text-[0.93rem] leading-[1.8] text-ink-mid">
+              The best way to appreciate the biophilic design and lakeside serenity of EarthAroma is to see it for yourself.
+              Book a private site tour at your convenience.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <a 
+                href="https://calendar.app.google/pEEdvnExZgn9kFkJ8" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="btn-primary"
+              >
+                Schedule Site Visit →
+              </a>
+              <a 
+                href={site.maps} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="btn-outline-forest"
+              >
+                Get Directions
+              </a>
+            </div>
           </FadeUp>
         </div>
       </section>
