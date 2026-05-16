@@ -137,7 +137,7 @@ function About() {
                   className="h-48 w-full rounded object-cover shadow-lg"
                 />
                 <img
-                  src="https://drive.google.com/file/d/1kkaEEpcqQAMgjBYVijrMCKa54eqBms3N/view?usp=sharing"
+                  src="https://github.com/Dshlokk/Rebuild-website/raw/f9c956924e79b07b70ed962e9d399811d59a65d8/DJI_0713.JPG"
                   alt="EarthAroma Lakefront"
                   className="h-64 w-full rounded object-cover shadow-lg"
                 />
