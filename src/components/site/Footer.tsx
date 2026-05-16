@@ -35,7 +35,10 @@ export function Footer() {
         ]} />
       </div>
       <div className="flex flex-col items-start justify-between gap-2 border-t border-white/10 pt-6 text-[0.7rem] text-ink-muted md:flex-row md:items-center">
-        <p>© 2025 {site.project} · {site.name}. All rights reserved. RERA Registered.</p>
+        <div className="space-y-1">
+          <p>© 2025 {site.project} · {site.name}. All rights reserved.</p>
+          <p>RERA PRM/KA/RERA/1250/303/PR/030822/005130</p>
+        </div>
         <p>Designed with intention. Built with purpose.</p>
       </div>
     </footer>
