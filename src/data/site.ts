@@ -1,6 +1,7 @@
 export const site = {
   name: "Pura Vida Villas",
   project: "EarthAroma",
+  projectUrl: "https://www.eartharoma.life/",
   location: "IVC Rd, Devanahalli",
   phone: "+91 98456 85226",
   phoneHref: "tel:+919845685226",

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/SectionHeader";
 import { FadeUp } from "@/components/site/Motion";
 import { ContactBar } from "@/components/site/ContactBar";
+import { site } from "@/data/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -21,7 +22,15 @@ function About() {
       <PageHeader
         label="The Philosophy"
         title={<>The Art of <em>Pure Living</em></>}
-        intro="Pura Vida — not just a phrase, but a way of being. At EarthAroma, we've translated Costa Rica's relaxed, soulful ethos into architecture, community, and lifestyle."
+        intro={
+          <>
+            Pura Vida — not just a phrase, but a way of being. At{" "}
+            <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">
+              {site.project}
+            </a>
+            , we've translated Costa Rica's relaxed, soulful ethos into architecture, community, and lifestyle.
+          </>
+        }
       />
 
       <section className="bg-white px-6 py-20 md:px-16">
@@ -42,6 +51,7 @@ function About() {
             <p>
               EarthAroma takes that ethos and makes it spatial. Tall ceilings invite breath. Native gardens invite
               pollinators. Biophilic geometry invites awe. Nothing here is decorative — every choice is rooted.
+              As a signature project within the <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.project}</a> ecosystem, Pura Vida Villas represents the pinnacle of our commitment to conscious living.
             </p>
             <p>
               Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't an escape — it's home.
@@ -64,6 +74,76 @@ function About() {
               <p className="mt-3 text-[0.9rem] leading-[1.8] text-ink-mid">{c.body}</p>
             </FadeUp>
           ))}
+        </div>
+      </section>
+
+      {/* EarthAroma Section */}
+      <section className="bg-white px-6 py-24 md:px-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+            <FadeUp>
+              <div className="section-label">The Parent Project</div>
+              <h2 className="section-title">
+                The EarthAroma <em>Legacy</em>
+              </h2>
+              <div className="mt-8 space-y-6 text-[0.95rem] leading-[1.85] text-ink-mid">
+                <p>
+                  EarthAroma is more than a developer; it is a curator of conscious communities. With a focus on sustainable luxury and lakefront serenity, EarthAroma has set a new benchmark for residential living in North Bengaluru.
+                </p>
+                <p>
+                  Every project under the EarthAroma banner is guided by the principle of "Life in Harmony." From the preservation of local flora to the integration of advanced renewable energy systems, we ensure that our impact on the earth is as beautiful as the homes we build.
+                </p>
+                <ul className="mt-6 space-y-4">
+                  {[
+                    "80+ Acres of Planned Development",
+                    "Pioneers in IGBC Platinum Certification",
+                    "Focus on Biophilic & Climate-Responsive Design",
+                    "Commitment to 100% Water Neutrality"
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-forest">
+                      <div className="h-1.5 w-1.5 rounded-full bg-gold" />
+                      <span className="text-[0.9rem] font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a 
+                  href={site.projectUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-outline-forest mt-4 inline-block"
+                >
+                  Visit EarthAroma Website →
+                </a>
+              </div>
+            </FadeUp>
+
+            <div className="grid grid-cols-2 gap-4">
+              <FadeUp delay={0.1} className="space-y-4">
+                <img
+                  src="/Images from pdf/4.png"
+                  alt="EarthAroma Landscape"
+                  className="h-64 w-full rounded object-cover shadow-lg"
+                />
+                <img
+                  src="/Images from pdf/15.png"
+                  alt="EarthAroma Architecture"
+                  className="h-48 w-full rounded object-cover shadow-lg"
+                />
+              </FadeUp>
+              <FadeUp delay={0.2} className="mt-8 space-y-4">
+                <img
+                  src="/Images from pdf/10.png"
+                  alt="EarthAroma Greenery"
+                  className="h-48 w-full rounded object-cover shadow-lg"
+                />
+                <img
+                  src="/Images from pdf/6.png"
+                  alt="EarthAroma Lakefront"
+                  className="h-64 w-full rounded object-cover shadow-lg"
+                />
+              </FadeUp>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -26,7 +26,7 @@ export function PageHeader({
 }: {
   label: string;
   title: ReactNode;
-  intro?: string;
+  intro?: ReactNode;
 }) {
   return (
     <header className="bg-cream px-6 pb-12 pt-36 md:px-16 md:pb-16 md:pt-44">

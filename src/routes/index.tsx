@@ -6,6 +6,7 @@ import { LifestyleQuote } from "@/components/site/LifestyleQuote";
 import { FadeUp, Stagger, staggerItem } from "@/components/site/Motion";
 import { motion } from "framer-motion";
 import { features, igbc } from "@/data/features";
+import { site } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -56,7 +57,7 @@ function Index() {
             </p>
             <p className="text-[0.93rem] leading-[1.85] text-ink-mid">
               In Costa Rica, <em>Pura Vida</em> represents the relaxed, active attitude toward life.
-              At EarthAroma, we've translated this ethos into architecture, community, and
+              At <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.project}</a>, we've translated this ethos into architecture, community, and
               lifestyle. Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't
               an escape — it's simply home.
             </p>

@@ -12,7 +12,7 @@ export function Footer() {
             className="mb-4 h-10 w-auto object-contain brightness-0 invert"
           />
           <p className="text-[0.78rem] leading-[1.7] text-ink-muted">
-            An eco-luxury community at {site.project}, inspired by the Costa Rican way of life. IGBC Platinum
+            An eco-luxury community at <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-cream transition-colors">{site.project}</a>, inspired by the Costa Rican way of life. IGBC Platinum
             Certified. {site.location}.
           </p>
         </div>
