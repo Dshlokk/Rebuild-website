@@ -120,24 +120,24 @@ function About() {
             <div className="grid grid-cols-2 gap-4">
               <FadeUp delay={0.1} className="space-y-4">
                 <img
-                  src="/Images from pdf/4.png"
+                  src="https://www.eartharoma.life/static/img/gallery/52.jpg"
                   alt="EarthAroma Landscape"
                   className="h-64 w-full rounded object-cover shadow-lg"
                 />
                 <img
-                  src="/Images from pdf/15.png"
+                  src="https://www.eartharoma.life/static/img/gallery/51.jpg"
                   alt="EarthAroma Architecture"
                   className="h-48 w-full rounded object-cover shadow-lg"
                 />
               </FadeUp>
               <FadeUp delay={0.2} className="mt-8 space-y-4">
                 <img
-                  src="/Images from pdf/10.png"
+                  src="https://www.eartharoma.life/static/img/gallery/53.jpg"
                   alt="EarthAroma Greenery"
                   className="h-48 w-full rounded object-cover shadow-lg"
                 />
                 <img
-                  src="/Images from pdf/6.png"
+                  src="https://drive.google.com/file/d/1kkaEEpcqQAMgjBYVijrMCKa54eqBms3N/view?usp=sharing"
                   alt="EarthAroma Lakefront"
                   className="h-64 w-full rounded object-cover shadow-lg"
                 />
