@@ -37,7 +37,7 @@ function About() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-16 md:grid-cols-2">
           <FadeUp>
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+              src="https://github.com/Dshlokk/Rebuild-website/raw/1992ba1f0a3950651255a4663bcb26c0bf11bd59/PURA%20VIDA%20ELEVATION.jpg.jpeg"
               alt="EarthAroma villa exterior"
               className="rounded object-cover"
             />
