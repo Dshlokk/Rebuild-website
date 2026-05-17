@@ -158,6 +158,40 @@ function About() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="bg-sand-light px-6 py-20 md:px-16">
+        <div className="mx-auto max-w-6xl">
+          <FadeUp>
+            <div className="section-label mb-8">Location</div>
+            <div className="aspect-video w-full overflow-hidden rounded shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.162794101456!2d77.6713889!3d13.3400556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1ec065604921%3A0xc6c7d7590d984cfb!2sEarth%20Aroma%20Lake%20Front!5e0!3m2!1sen!2sin!4v1715946800000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Earth Aroma Location Map"
+              ></iframe>
+            </div>
+            <div className="mt-6 flex flex-col items-center justify-between gap-4 md:flex-row">
+              <p className="text-[0.9rem] text-ink-mid italic">
+                Earth Aroma Lakefront, IVC Road, Devanahalli, Bengaluru
+              </p>
+              <a 
+                href="https://maps.app.goo.gl/NpRN8KxAWHHoEzKWA" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[0.9rem] font-medium text-forest underline hover:text-gold transition-colors"
+              >
+                Open in Google Maps →
+              </a>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       <ContactBar />
     </>
   );
