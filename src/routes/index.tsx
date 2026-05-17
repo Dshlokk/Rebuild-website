@@ -165,6 +165,20 @@ function Index() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="bg-white px-6 pb-24 md:px-16">
+        <div className="mx-auto max-w-6xl">
+          <FadeUp>
+            <div className="section-label mb-8">Location Map</div>
+            <img
+              src="https://raw.githubusercontent.com/Dshlokk/Rebuild-website/5493d0939f7a1f934f2322f030beb79288a4eff3/map.jpeg"
+              alt="Pura Vida Villas EarthAroma Location Map"
+              className="w-full rounded shadow-xl object-cover"
+            />
+          </FadeUp>
+        </div>
+      </section>
+
       <LifestyleQuote />
       <ContactBar />
     </>

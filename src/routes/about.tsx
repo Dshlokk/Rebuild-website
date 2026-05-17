@@ -51,7 +51,7 @@ function About() {
             <p>
               EarthAroma takes that ethos and makes it spatial. Tall ceilings invite breath. Native gardens invite
               pollinators. Biophilic geometry invites awe. Nothing here is decorative — every choice is rooted.
-              As a signature project within the <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.developer}</a> ecosystem, Pura Vida Villas represents the pinnacle of our commitment to conscious living.
+              As a signature project within the <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.project}</a> ecosystem, Pura Vida Villas represents the pinnacle of our commitment to conscious living.
             </p>
             <p>
               Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't an escape — it's home.
@@ -84,17 +84,17 @@ function About() {
             <FadeUp>
               <div className="section-label">The Developer</div>
               <h2 className="section-title">
-                The {site.developer} <em>Legacy</em>
+                The Parisara <em>Legacy</em>
               </h2>
               <div className="mt-8 space-y-6 text-[0.95rem] leading-[1.85] text-ink-mid">
                 <p>
-                  {site.developer}'s {site.project} is a 20-acre lakefront plotted community launched in 2023 and now delivered with a Completion Certificate obtained in March 2026.
+                  Parisara's Earth Aroma is a 20-acre lakefront plotted community launched in 2023 and now delivered with a Completion Certificate obtained in March 2026.
                 </p>
                 <p>
                   {site.developer} is more than a developer—they are curators of conscious communities with a focus on sustainable luxury, value for money, and large open spaces with additional extra space offered to breathe, play, and live comfortably.
                 </p>
                 <p>
-                  Every project under the {site.developer} banner is guided by the principle of "Life in Harmony." From the preservation of local flora to the integration of advanced renewable energy systems, we ensure that our impact on the earth is as beautiful as the homes we build. The developer has been in business since 2012, with their first project delivered in 2015.
+                  Every project under the Parisara banner is guided by the principle of "Life in Harmony." From the preservation of local flora to the integration of advanced renewable energy systems, we ensure that our impact on the earth is as beautiful as the homes we build. The developer has been in business since 2012, with their first project delivered in 2015.
                 </p>
                 
                 <div className="mt-8">
@@ -155,40 +155,6 @@ function About() {
               </FadeUp>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="bg-sand-light px-6 py-20 md:px-16">
-        <div className="mx-auto max-w-6xl">
-          <FadeUp>
-            <div className="section-label mb-8">Location</div>
-            <div className="aspect-video w-full overflow-hidden rounded shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.162794101456!2d77.6713889!3d13.3400556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1ec065604921%3A0xc6c7d7590d984cfb!2sEarth%20Aroma%20Lake%20Front!5e0!3m2!1sen!2sin!4v1715946800000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Earth Aroma Location Map"
-              ></iframe>
-            </div>
-            <div className="mt-6 flex flex-col items-center justify-between gap-4 md:flex-row">
-              <p className="text-[0.9rem] text-ink-mid italic">
-                Earth Aroma Lakefront, IVC Road, Devanahalli, Bengaluru
-              </p>
-              <a 
-                href="https://maps.app.goo.gl/NpRN8KxAWHHoEzKWA" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-[0.9rem] font-medium text-forest underline hover:text-gold transition-colors"
-              >
-                Open in Google Maps →
-              </a>
-            </div>
-          </FadeUp>
         </div>
       </section>
 
