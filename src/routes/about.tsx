@@ -51,7 +51,7 @@ function About() {
             <p>
               EarthAroma takes that ethos and makes it spatial. Tall ceilings invite breath. Native gardens invite
               pollinators. Biophilic geometry invites awe. Nothing here is decorative — every choice is rooted.
-              As a signature project within the <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.project}</a> ecosystem, Pura Vida Villas represents the pinnacle of our commitment to conscious living.
+              As a signature project within the <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.developer}</a> ecosystem, Pura Vida Villas represents the pinnacle of our commitment to conscious living.
             </p>
             <p>
               Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't an escape — it's home.
@@ -82,30 +82,41 @@ function About() {
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
             <FadeUp>
-              <div className="section-label">The Parent Project</div>
+              <div className="section-label">The Developer</div>
               <h2 className="section-title">
-                The EarthAroma <em>Legacy</em>
+                The {site.developer} <em>Legacy</em>
               </h2>
               <div className="mt-8 space-y-6 text-[0.95rem] leading-[1.85] text-ink-mid">
                 <p>
-                  EarthAroma is more than a developer; it is a curator of conscious communities. With a focus on sustainable luxury and lakefront serenity, EarthAroma has set a new benchmark for residential living in North Bengaluru.
+                  {site.developer}'s {site.project} is a 20-acre lakefront plotted community launched in 2023 and now delivered with a Completion Certificate obtained in March 2026.
                 </p>
                 <p>
-                  Every project under the EarthAroma banner is guided by the principle of "Life in Harmony." From the preservation of local flora to the integration of advanced renewable energy systems, we ensure that our impact on the earth is as beautiful as the homes we build.
+                  {site.developer} is more than a developer—they are curators of conscious communities with a focus on sustainable luxury, value for money, and large open spaces with additional extra space offered to breathe, play, and live comfortably.
                 </p>
-                <ul className="mt-6 space-y-4">
-                  {[
-                    "80+ Acres of Planned Development",
-                    "Pioneers in IGBC Platinum Certification",
-                    "Focus on Biophilic & Climate-Responsive Design",
-                    "Commitment to 100% Water Neutrality"
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-forest">
-                      <div className="h-1.5 w-1.5 rounded-full bg-gold" />
-                      <span className="text-[0.9rem] font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p>
+                  Every project under the {site.developer} banner is guided by the principle of "Life in Harmony." From the preservation of local flora to the integration of advanced renewable energy systems, we ensure that our impact on the earth is as beautiful as the homes we build. The developer has been in business since 2012, with their first project delivered in 2015.
+                </p>
+                
+                <div className="mt-8">
+                  <h4 className="font-display text-lg text-forest mb-4">Our Track Record</h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                    {[
+                      "Jenukal Parkridge – Basaveshwaranagar",
+                      "Lebensraum – Rajajinagar",
+                      "Swarnadhara Plotted community, Mangaluru",
+                      "Gem Food Park – Davanagere",
+                      "Apollo Hospital Sheshadripuram",
+                      "Cloud9 Hospitals, Old Airport Road",
+                      "Earth Aroma @ IVC Road, Devanhalli"
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-ink-mid">
+                        <div className="mt-2 h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
+                        <span className="text-[0.85rem] leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 <a 
                   href={site.projectUrl} 
                   target="_blank" 
