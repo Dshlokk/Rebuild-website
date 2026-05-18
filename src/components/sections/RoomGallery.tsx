@@ -14,15 +14,15 @@ export function RoomGallery() {
         #Elevated<em>Living</em>
       </h2>
 
-      <div className="mb-10 flex flex-nowrap gap-0 overflow-x-auto border-b border-cream-dark pb-px scrollbar-hide">
+      <div className="mb-10 flex flex-wrap border-b border-cream-dark md:flex-nowrap md:overflow-x-auto md:scrollbar-hide">
         {rooms.map((r, i) => (
           <button
             key={r.name}
             onClick={() => setActive(i)}
-            className={`flex-shrink-0 border-b-2 px-5 py-3 text-[0.75rem] uppercase tracking-[0.14em] transition-colors ${
+            className={`px-4 py-3 text-[0.7rem] uppercase tracking-[0.12em] transition-all md:flex-shrink-0 md:px-5 md:text-[0.75rem] md:tracking-[0.14em] ${
               i === active
-                ? "border-forest text-forest"
-                : "border-transparent text-ink-muted hover:text-forest"
+                ? "border-b-2 border-forest text-forest font-medium"
+                : "border-b-2 border-transparent text-ink-muted hover:text-forest"
             }`}
           >
             {r.name}

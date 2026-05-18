@@ -174,6 +174,9 @@ function Index() {
               src="https://raw.githubusercontent.com/Dshlokk/Rebuild-website/5493d0939f7a1f934f2322f030beb79288a4eff3/map.jpeg"
               alt="Pura Vida Villas EarthAroma Location Map"
               className="w-full rounded shadow-xl object-cover"
+              loading="lazy"
+              width={1200}
+              height={800}
             />
           </FadeUp>
         </div>

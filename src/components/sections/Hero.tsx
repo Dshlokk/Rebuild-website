@@ -11,6 +11,8 @@ const badges = [
   { icon: "🌿", strong: "IGBC Platinum", sub: "Certified Eco-Home" },
   { icon: "🏛️", strong: "Vastu Compliant", sub: "3600 Sq.Ft. Villas" },
   { icon: "☀️", strong: "100% Renewables", sub: "Zero Carbon Footprint" },
+  { icon: "🌊", strong: "Premium Lakefront", sub: "Community" },
+  { icon: "📜", strong: "Plot ownership", sub: "no UDS" },
 ];
 
 export function Hero() {
