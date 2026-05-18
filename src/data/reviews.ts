@@ -31,4 +31,28 @@ export const reviews: Review[] = [
     date: "3 months ago",
     body: "The attention to detail in the infrastructure—stamped concrete roads, underground piping—is impressive. Truly a premium experience.",
   },
+  {
+    name: "Ananya Iyer",
+    rating: 5,
+    date: "2 weeks ago",
+    body: "The sunset over the lake from the clubhouse is magical. Pura Vida Villas captures the essence of luxury living in harmony with nature.",
+  },
+  {
+    name: "Rahul Mehra",
+    rating: 5,
+    date: "5 months ago",
+    body: "Finally a project that prioritizes space and privacy. The villa designs are thoughtful, with great ventilation and natural light.",
+  },
+  {
+    name: "Sneha Kapoor",
+    rating: 5,
+    date: "3 months ago",
+    body: "Impressed by the IGBC Platinum standards. It's comforting to know our home is designed for 100% renewable energy and sustainability.",
+  },
+  {
+    name: "Karthik V.",
+    rating: 5,
+    date: "6 months ago",
+    body: "One of the best lakefront communities in North Bangalore. The handover was smooth, and the quality of construction is top-notch.",
+  },
 ];

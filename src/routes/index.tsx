@@ -170,14 +170,30 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <FadeUp>
             <div className="section-label mb-8">Location Map</div>
-            <img
-              src="https://raw.githubusercontent.com/Dshlokk/Rebuild-website/5493d0939f7a1f934f2322f030beb79288a4eff3/map.jpeg"
-              alt="Pura Vida Villas EarthAroma Location Map"
-              className="w-full rounded shadow-xl object-cover"
-              loading="lazy"
-              width={1200}
-              height={800}
-            />
+            <div className="relative group overflow-hidden rounded shadow-xl">
+              <img
+                src="https://raw.githubusercontent.com/Dshlokk/Rebuild-website/5493d0939f7a1f934f2322f030beb79288a4eff3/map.jpeg"
+                alt="Pura Vida Villas EarthAroma Location Map"
+                className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                loading="lazy"
+                width={1200}
+                height={800}
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-4">
+                <Link
+                  to="/contact"
+                  className="btn-primary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+                >
+                  Download Brochure
+                </Link>
+                <Link
+                  to="/about"
+                  className="btn-ghost !border-white !text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75"
+                >
+                  Know More
+                </Link>
+              </div>
+            </div>
           </FadeUp>
         </div>
       </section>
