@@ -158,6 +158,38 @@ function About() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="bg-sand-light/50 px-6 py-20 md:px-16 border-t border-cream-dark">
+        <div className="mx-auto max-w-6xl">
+          <FadeUp>
+            <div className="section-label">Location</div>
+            <h2 className="section-title">
+              Find us at <em>EarthAroma</em>
+            </h2>
+            <div className="mt-10 overflow-hidden rounded-xl border border-cream-dark shadow-2xl">
+              <iframe
+                title="EarthAroma Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.6558485239!2d77.5953988!3d13.226119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1f5d41d61d4f%3A0xa1cd8661d5bd05e4!2sEarth%20Aroma!5e0!3m2!1sen!2sin!4v1715617000000!5m2!1sen!2sin"
+                className="h-[450px] w-full"
+                loading="lazy"
+                style={{ border: 0 }}
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <a 
+                href="https://maps.app.goo.gl/W4H2Uowyqry6wLBx8" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="btn-outline-forest"
+              >
+                Open in Google Maps →
+              </a>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
       <ContactBar />
     </>
   );
