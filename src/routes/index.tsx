@@ -40,7 +40,7 @@ function Index() {
               className="absolute right-0 top-0 h-[82%] w-[80%] rounded object-cover shadow-lg"
             />
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+              src="https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/19.jpg"
               alt="Tropical garden"
               className="absolute bottom-0 left-0 h-[50%] w-[50%] rounded border-[4px] border-white object-cover shadow-xl md:border-[6px]"
             />

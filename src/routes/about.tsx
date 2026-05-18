@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site/SectionHeader";
 import { FadeUp } from "@/components/site/Motion";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
 import { ContactBar } from "@/components/site/ContactBar";
 import { site } from "@/data/site";
 
@@ -157,6 +158,8 @@ function About() {
           </div>
         </div>
       </section>
+
+      <GoogleReviews />
 
       {/* Map Section */}
       <section className="bg-sand-light/50 px-6 py-20 md:px-16 border-t border-cream-dark">
