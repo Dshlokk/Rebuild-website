@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { reviews } from "@/data/reviews";
-import { FadeUp, Stagger, staggerItem } from "./Motion";
+import { FadeUp, Stagger, staggerItem } from "@/components/site/Motion";
 
 export function GoogleReviews() {
   return (
