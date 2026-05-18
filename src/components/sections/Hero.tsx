@@ -13,6 +13,7 @@ const badges = [
   { icon: "☀️", strong: "100% Renewables", sub: "Zero Carbon Footprint" },
   { icon: "🌊", strong: "Premium Lakefront", sub: "Community" },
   { icon: "📜", strong: "Plot ownership", sub: "no UDS" },
+  { icon: "🏗️", strong: "12 Months", sub: "Fast Villa Delivery" },
 ];
 
 export function Hero() {
