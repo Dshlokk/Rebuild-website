@@ -170,28 +170,46 @@ function Index() {
         <div className="mx-auto max-w-6xl">
           <FadeUp>
             <div className="section-label mb-8">Location Map</div>
-            <div className="relative group overflow-hidden rounded shadow-xl">
+            <div className="relative group overflow-hidden rounded shadow-xl border border-cream-dark">
               <img
                 src="https://raw.githubusercontent.com/Dshlokk/Rebuild-website/5493d0939f7a1f934f2322f030beb79288a4eff3/map.jpeg"
                 alt="Pura Vida Villas EarthAroma Location Map"
-                className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                className="w-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 loading="lazy"
                 width={1200}
                 height={800}
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center gap-4">
-                <Link
-                  to="/contact"
-                  className="btn-primary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
-                >
-                  Download Brochure
-                </Link>
-                <Link
-                  to="/about"
-                  className="btn-ghost !border-white !text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75"
-                >
-                  Know More
-                </Link>
+              
+              {/* Always Visible Overlay */}
+              <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center">
+                <div className="mb-6 transform transition-transform duration-500 group-hover:scale-105">
+                  <h3 className="font-display text-2xl md:text-3xl text-white mb-2 [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
+                    Zoom & Explore Details
+                  </h3>
+                  <p className="text-white/90 text-[0.85rem] md:text-[0.95rem] max-w-sm mx-auto leading-relaxed [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">
+                    For high-resolution details and site layouts, download the complete brochure pack.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <Link
+                    to="/contact"
+                    className="btn-primary !bg-gold hover:!bg-white hover:!text-forest !px-8 shadow-2xl transition-all duration-300"
+                  >
+                    Download Brochure
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="btn-ghost !border-white !text-white hover:!bg-white/10 !px-8 transition-all duration-300"
+                  >
+                    Know More
+                  </Link>
+                </div>
+              </div>
+
+              {/* Subtle bottom hint (Desktop only) */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/50 text-[0.65rem] uppercase tracking-[0.2em] hidden md:block">
+                Interactive View & Location Insights
               </div>
             </div>
           </FadeUp>

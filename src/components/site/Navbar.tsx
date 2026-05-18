@@ -21,7 +21,7 @@ export function Navbar() {
         <img 
           src="/logo.png" 
           alt={site.name} 
-          className="h-26s w-auto object-contain md:h-20"
+          className="h-14 w-auto object-contain md:h-24"
         />
         <span className="text-[0.55rem] uppercase tracking-[0.2em] text-gold/80 -mt-1 font-medium">
           [Official Website]
