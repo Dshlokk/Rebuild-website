@@ -17,11 +17,14 @@ export function Navbar() {
         scrolled ? "bg-cream/95 shadow-[0_1px_24px_rgba(45,74,45,0.08)]" : "bg-cream/85"
       } border-b border-sand/20`}
     >
+      {/* Spacer to help center logo on mobile */}
+      <div className="w-8 md:hidden" />
+
       <Link to="/" className="flex flex-col items-center gap-0">
         <img 
           src="/logo.png" 
           alt={site.name} 
-          className="h-14 w-auto object-contain md:h-24"
+          className="h-20 w-auto object-contain md:h-24"
         />
         <span className="text-[0.55rem] uppercase tracking-[0.2em] text-gold/80 -mt-1 font-medium">
           [Official Website]
