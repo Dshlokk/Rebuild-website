@@ -1,14 +1,14 @@
 # Project Instructions
 
-This project is built with **TanStack Start** (React 19), **Tailwind CSS 4**, and **TanStack Router**.
+This project is built with **React 19**, **Tailwind CSS 4**, and **TanStack Router** (SPA mode).
 
 ## Tech Stack
-- **Framework:** [TanStack Start](https://tanstack.com/start)
+- **Framework:** React 19 (Vite SPA)
 - **Routing:** [TanStack Router](https://tanstack.com/router)
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/) with [Framer Motion](https://www.framer.com/motion/)
 - **UI Components:** [Shadcn UI](https://ui.shadcn.com/) (Radix UI)
 - **Package Manager:** [Bun](https://bun.sh/)
-- **Deployment:** [Cloudflare Pages](https://pages.cloudflare.com/)
+- **Deployment:** [GoDaddy cPanel](https://www.godaddy.com/hosting/cpanel-hosting)
 
 ## Conventions
 
@@ -23,7 +23,7 @@ This project is built with **TanStack Start** (React 19), **Tailwind CSS 4**, an
 ### Development Workflow
 - **Linting:** Use `npm run lint` to run ESLint.
 - **Formatting:** Use `npm run format` to run Prettier.
-- **Routing:** After adding or moving routes, the router will automatically regenerate `src/routeTree.gen.ts` during dev.
+- **Routing:** After adding or moving routes, the router will automatically regenerate `src/routeTree.gen.ts` during dev or build.
 
 ### Styling
 - This project uses Tailwind CSS 4.
@@ -32,20 +32,11 @@ This project is built with **TanStack Start** (React 19), **Tailwind CSS 4**, an
 
 ## Deployment
 
-### Cloudflare Pages (Default)
-This project is pre-configured for Cloudflare Pages.
-- **Build Command:** `bun run build`
-- **Output Directory:** `dist/client` (Static) and `dist/server` (Functions)
-- **Framework Preset:** TanStack Start / Vinxi (if available) or use the `wrangler.jsonc` configuration.
-
-### Vercel
-This project uses a custom Edge Function shim to support TanStack Start's SSR on Vercel.
-- **Build Command:** `bun run build`
-- **Output Directory:** `dist/client`
-- **Configuration:** `vercel.json` routes non-asset requests to `api/index.js`, which runs the bundled server as an Edge Function.
-
-#### Steps for Vercel Deployment:
-1. Connect your repository to Vercel.
-2. Ensure the **Build Command** is `bun run build`.
-3. Ensure the **Output Directory** is set to `dist/client`.
-4. Vercel will automatically detect the `api/index.js` and `vercel.json` files.
+### GoDaddy cPanel
+This project is configured as a Single Page Application (SPA).
+1. **Build Command:** `bun run build`
+2. **Output Directory:** `dist/`
+3. **Configuration:** The `public/.htaccess` file ensures that all requests are routed to `index.html` for client-side routing.
+4. **Steps:**
+    - Run the build command.
+    - Upload the contents of `dist/` to your `public_html` directory on cPanel.

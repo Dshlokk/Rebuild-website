@@ -1,4 +1,3 @@
-import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
 const leadSchema = z.object({
@@ -11,8 +10,7 @@ const leadSchema = z.object({
 // The URL you provided
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby7drsZvw4ClcDewtMQ6YGIrxWtOJDPWBAJqIllu9_zjoi9GTqymNC_6jkXqXldVp6s/exec"; 
 
-export const saveLead = createServerFn({ method: "POST" })
-  .handler(async ({ data }: { data: any }) => {
+export const saveLead = async (data: any) => {
     // Validate inside the handler
     const validatedData = leadSchema.parse(data);
 
@@ -39,5 +37,5 @@ export const saveLead = createServerFn({ method: "POST" })
       console.error("Failed to save lead to Google Sheets:", error);
       throw error;
     }
-  });
+  };
 

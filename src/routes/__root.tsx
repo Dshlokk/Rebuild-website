@@ -4,11 +4,8 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 
-import appCss from "../styles.css?url";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { FloatIcons } from "@/components/site/FloatIcons";
@@ -57,50 +54,11 @@ function PendingComponent() {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Pura Vida Villas — EarthAroma | Eco-Luxury Living in Bengaluru" },
-      { name: "description", content: "EarthAroma by Pura Vida Villas — IGBC Platinum certified eco-luxury villas in Bengaluru. Biophilic design, lakeside serenity, 100% renewable energy." },
-      { name: "author", content: "Pura Vida Villas" },
-      { property: "og:title", content: "Pura Vida Villas — EarthAroma" },
-      { property: "og:description", content: "Eco-luxury villa community inspired by the Costa Rican way of life." },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=80" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap",
-      },
-      { rel: "icon", href: "https://github.com/Dshlokk/Rebuild-website/raw/217372617fcfd86906304655c1044ef8a0c33419/Faviconn.png" },
-      { rel: "stylesheet", href: appCss },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   pendingComponent: PendingComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

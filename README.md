@@ -2,11 +2,9 @@
 
 Rebuild-website/
 │
-├── api/                          # Backend/API functions
-│   └── index.js
-│
 ├── public/                       # Public static assets
-│   └── logo.png
+│   ├── logo.png
+│   └── .htaccess                 # Routing support for GoDaddy cPanel
 │
 ├── src/
 │   │
@@ -57,21 +55,27 @@ Rebuild-website/
 │   │   ├── sustainability.tsx
 │   │   └── terms.tsx
 │   │
+│   ├── main.tsx                  # SPA entry point
 │   ├── router.tsx
 │   ├── routeTree.gen.ts
-│   ├── server.ts
-│   ├── start.ts
 │   └── styles.css
 │
-├── Images from pdf/              # Extracted brochure images
-├── Banner Video stiched.mp4      # Main hero/background video
-├── EA-Villa-Brochure-3.pdf       # Property brochure PDF
-│
+├── index.html                    # Main HTML entry point
 ├── package.json
 ├── bun.lock
 ├── vite.config.ts
 ├── tsconfig.json
 ├── eslint.config.js
-├── components.json
-├── vercel.json
-└── wrangler.jsonc
+└── components.json
+
+## Deployment
+
+### GoDaddy cPanel (Recommended)
+This project is configured as a Single Page Application (SPA) for easy cPanel deployment.
+1. Run `bun run build` (or `npm run build`).
+2. The production files will be generated in the `dist/` directory.
+3. Zip the contents of the `dist/` folder.
+4. Log in to your GoDaddy cPanel.
+5. Use **File Manager** to upload the zip file to the `public_html` directory.
+6. Extract the zip file in `public_html`.
+7. Ensure the `.htaccess` file from the `public/` directory was also uploaded (it handles routing).
