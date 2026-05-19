@@ -81,7 +81,7 @@ function Contact() {
                 };
 
                 try {
-                  await saveLead({ data });
+                  await saveLead(data);
                   setSubmitting("sent");
                   
                   // Trigger direct download

@@ -31,7 +31,7 @@ export function LeadPopup() {
     };
 
     try {
-      await saveLead({ data });
+      await saveLead(data);
       setSubmitting("sent");
 
       // Trigger direct download
