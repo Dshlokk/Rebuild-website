@@ -1,4 +1,5 @@
 import { site } from "@/data/site";
+import { Phone, MessageCircle } from "lucide-react";
 
 const icons = {
   call: "M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z",
@@ -20,31 +21,55 @@ const items = [
 
 export function FloatIcons() {
   return (
-    <div className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col overflow-hidden rounded-l-[20px] border border-r-0 border-white/40 bg-white/45 shadow-[-4px_8px_24px_rgba(0,0,0,0.08)] backdrop-blur-[16px] backdrop-saturate-[180%] md:flex">
-      {items.map((it) => (
-        <a
-          key={it.label}
-          href={it.href}
-          target={it.ext ? "_blank" : undefined}
-          rel={it.ext ? "noreferrer" : undefined}
-          className="group relative flex h-[72px] w-[64px] flex-col items-center justify-center gap-1.5 border-b border-white/20 transition-all last:border-b-0 hover:bg-white/20"
-          title={it.label}
-        >
-          <svg
-            viewBox="0 0 24 24"
-            className="h-5 w-5 stroke-[#2c4c3b] transition-transform duration-300 group-hover:scale-110"
-            fill="none"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+    <>
+      {/* Desktop Floating Bar */}
+      <div className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col overflow-hidden rounded-l-[20px] border border-r-0 border-white/40 bg-white/45 shadow-[-4px_8px_24px_rgba(0,0,0,0.08)] backdrop-blur-[16px] backdrop-saturate-[180%] md:flex">
+        {items.map((it) => (
+          <a
+            key={it.label}
+            href={it.href}
+            target={it.ext ? "_blank" : undefined}
+            rel={it.ext ? "noreferrer" : undefined}
+            className="group relative flex h-[72px] w-[64px] flex-col items-center justify-center gap-1.5 border-b border-white/20 transition-all last:border-b-0 hover:bg-white/20"
+            title={it.label}
           >
-            <path d={it.d} />
-          </svg>
-          <span className="text-[0.62rem] font-medium uppercase tracking-[0.05em] text-[#2c4c3b]/90 transition-colors">
-            {it.label}
-          </span>
+            <svg
+              viewBox="0 0 24 24"
+              className="h-5 w-5 stroke-[#2c4c3b] transition-transform duration-300 group-hover:scale-110"
+              fill="none"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d={it.d} />
+            </svg>
+            <span className="text-[0.62rem] font-medium uppercase tracking-[0.05em] text-[#2c4c3b]/90 transition-colors">
+              {it.label}
+            </span>
+          </a>
+        ))}
+      </div>
+
+      {/* Mobile Floating Buttons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 md:hidden">
+        <a
+          href={site.whatsapp}
+          target="_blank"
+          rel="noreferrer"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_rgba(37,211,102,0.4)] transition-transform active:scale-90"
+          aria-label="WhatsApp"
+        >
+          <MessageCircle className="h-6 w-6 stroke-white" fill="none" strokeWidth={2} />
         </a>
-      ))}
-    </div>
+        <a
+          href={site.phoneHref}
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-forest text-white shadow-[0_4px_12px_rgba(44,76,59,0.4)] transition-transform active:scale-90"
+          aria-label="Call"
+        >
+          <Phone className="h-5 w-5 stroke-white" fill="none" strokeWidth={2} />
+        </a>
+      </div>
+    </>
   );
 }
+
