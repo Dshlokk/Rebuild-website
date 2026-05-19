@@ -37,11 +37,13 @@ function About() {
       <section className="bg-white px-6 py-20 md:px-16">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-16 md:grid-cols-2">
           <FadeUp>
-            <img
-              src="https://github.com/Dshlokk/Rebuild-website/raw/1992ba1f0a3950651255a4663bcb26c0bf11bd59/PURA%20VIDA%20ELEVATION.jpg.jpeg"
-              alt="EarthAroma villa exterior"
-              className="rounded object-cover"
-            />
+            <Link to="/gallery">
+              <img
+                src="https://github.com/Dshlokk/Rebuild-website/raw/1992ba1f0a3950651255a4663bcb26c0bf11bd59/PURA%20VIDA%20ELEVATION.jpg.jpeg"
+                alt="EarthAroma villa exterior"
+                className="rounded object-cover transition-transform hover:scale-[1.02]"
+              />
+            </Link>
           </FadeUp>
           <FadeUp delay={0.1} className="space-y-6 text-[0.95rem] leading-[1.85] text-ink-mid">
             <p>
@@ -131,28 +133,36 @@ function About() {
 
             <div className="grid grid-cols-2 gap-4">
               <FadeUp delay={0.1} className="space-y-4">
-                <img
-                  src="https://www.eartharoma.life/static/img/gallery/52.jpg"
-                  alt="EarthAroma Landscape"
-                  className="h-64 w-full rounded object-cover shadow-lg"
-                />
-                <img
-                  src="https://www.eartharoma.life/static/img/gallery/51.jpg"
-                  alt="EarthAroma Architecture"
-                  className="h-48 w-full rounded object-cover shadow-lg"
-                />
+                <Link to="/gallery">
+                  <img
+                    src="https://www.eartharoma.life/static/img/gallery/52.jpg"
+                    alt="EarthAroma Landscape"
+                    className="h-64 w-full rounded object-cover shadow-lg transition-transform hover:scale-[1.03]"
+                  />
+                </Link>
+                <Link to="/gallery">
+                  <img
+                    src="https://www.eartharoma.life/static/img/gallery/51.jpg"
+                    alt="EarthAroma Architecture"
+                    className="h-48 w-full rounded object-cover shadow-lg transition-transform hover:scale-[1.03]"
+                  />
+                </Link>
               </FadeUp>
               <FadeUp delay={0.2} className="mt-8 space-y-4">
-                <img
-                  src="https://www.eartharoma.life/static/img/gallery/53.jpg"
-                  alt="EarthAroma Greenery"
-                  className="h-48 w-full rounded object-cover shadow-lg"
-                />
-                <img
-                  src="https://github.com/Dshlokk/Rebuild-website/raw/6e07cecfab62b52a698c3926bcac00b0224c6616/13e24c8d-9777-4190-b761-92447520cbe2.JPG"
-                  alt="EarthAroma Lakefront"
-                  className="h-64 w-full rounded object-cover shadow-lg"
-                />
+                <Link to="/gallery">
+                  <img
+                    src="https://www.eartharoma.life/static/img/gallery/53.jpg"
+                    alt="EarthAroma Greenery"
+                    className="h-48 w-full rounded object-cover shadow-lg transition-transform hover:scale-[1.03]"
+                  />
+                </Link>
+                <Link to="/gallery">
+                  <img
+                    src="https://github.com/Dshlokk/Rebuild-website/raw/6e07cecfab62b52a698c3926bcac00b0224c6616/13e24c8d-9777-4190-b761-92447520cbe2.JPG"
+                    alt="EarthAroma Lakefront"
+                    className="h-64 w-full rounded object-cover shadow-lg transition-transform hover:scale-[1.03]"
+                  />
+                </Link>
               </FadeUp>
             </div>
           </div>

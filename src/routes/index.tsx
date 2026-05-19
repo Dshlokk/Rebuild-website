@@ -33,18 +33,31 @@ function Index() {
       {/* About teaser */}
       <section className="relative bg-white px-6 py-20 md:px-16 md:py-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-          <FadeUp className="relative h-[380px] sm:h-[450px] md:h-[520px]">
-            <img
-              src="https://github.com/Dshlokk/Rebuild-website/raw/5b6d9ac2b29288d9a2cc23bb7164cb24dd2aa458/PURA%20VIDA%20ELEVATION.jpg.jpeg"
-              alt="Pura Vida villa"
-              className="absolute right-0 top-0 h-[82%] w-[80%] rounded object-cover shadow-lg"
-            />
-            <img
-              src="https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/19.jpg"
-              alt="Tropical garden"
-              className="absolute bottom-0 left-0 h-[50%] w-[50%] rounded border-[4px] border-white object-cover shadow-xl md:border-[6px]"
-            />
-          </FadeUp>
+          <div className="flex flex-col items-end">
+            <Link to="/gallery" className="w-full">
+              <FadeUp className="relative h-[380px] sm:h-[450px] md:h-[520px]">
+                <img
+                  src="https://github.com/Dshlokk/Rebuild-website/raw/5b6d9ac2b29288d9a2cc23bb7164cb24dd2aa458/PURA%20VIDA%20ELEVATION.jpg.jpeg"
+                  alt="Pura Vida villa"
+                  className="absolute right-0 top-0 h-[82%] w-[80%] rounded object-cover shadow-lg transition-transform hover:scale-[1.02]"
+                />
+                <img
+                  src="https://github.com/Dshlokk/Rebuild-website/raw/86fe6cf7b4c59ac74e5e6db8d0c074d5aedbbb71/Images%20from%20pdf/19.jpg"
+                  alt="Tropical garden"
+                  className="absolute bottom-0 left-0 h-[50%] w-[50%] rounded border-[4px] border-white object-cover shadow-xl md:border-[6px] transition-transform hover:scale-[1.05]"
+                />
+              </FadeUp>
+            </Link>
+            <Link 
+              to="/gallery" 
+              className="mt-6 flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-widest text-forest hover:text-gold transition-colors md:hidden"
+            >
+              Click to View Gallery
+              <svg viewBox="0 0 24 24" className="h-4 w-4 stroke-current" fill="none" strokeWidth="2">
+                <path d="M5 12h14m-7-7l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
           <FadeUp delay={0.1}>
             <div className="section-label">The Philosophy</div>
             <h2 className="section-title">
@@ -171,14 +184,16 @@ function Index() {
           <FadeUp>
             <div className="section-label mb-8">Location Map</div>
             <div className="relative group overflow-hidden rounded shadow-xl border border-cream-dark">
-              <img
-                src="https://raw.githubusercontent.com/Dshlokk/Rebuild-website/5493d0939f7a1f934f2322f030beb79288a4eff3/map.jpeg"
-                alt="Pura Vida Villas EarthAroma Location Map"
-                className="w-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                loading="lazy"
-                width={1200}
-                height={800}
-              />
+              <Link to="/gallery">
+                <img
+                  src="https://raw.githubusercontent.com/Dshlokk/Rebuild-website/5493d0939f7a1f934f2322f030beb79288a4eff3/map.jpeg"
+                  alt="Pura Vida Villas EarthAroma Location Map"
+                  className="w-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  loading="lazy"
+                  width={1200}
+                  height={800}
+                />
+              </Link>
               
               {/* Always Visible Overlay */}
               <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center">

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { PageHeader } from "@/components/site/SectionHeader";
 import { FadeUp, Stagger, staggerItem } from "@/components/site/Motion";
@@ -41,11 +41,13 @@ function SustainabilityPage() {
             <span className="pointer-events-none absolute -right-6 -top-10 font-display text-[clamp(7rem,14vw,12rem)] font-light leading-[0.9] text-forest opacity-[0.08]">
               100%
             </span>
-            <img
-              src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=900&q=80"
-              alt="Lush green tropical"
-              className="h-[420px] w-full rounded object-cover"
-            />
+            <Link to="/gallery">
+              <img
+                src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=900&q=80"
+                alt="Lush green tropical"
+                className="h-[420px] w-full rounded object-cover transition-transform hover:scale-[1.02]"
+              />
+            </Link>
             <div className="absolute -bottom-6 -left-6 max-w-[200px] rounded bg-forest p-5 text-cream">
               <div className="mb-1 text-[0.7rem] uppercase tracking-[0.14em] text-forest-pale">IGBC Status</div>
               <div className="font-display text-2xl text-gold-light">Platinum</div>
