@@ -9,9 +9,16 @@ export const Route = createFileRoute("/sustainability")({
   head: () => ({
     meta: [
       { title: "Sustainability — Pura Vida Villas | IGBC Platinum Eco-Homes" },
-      { name: "description", content: "Rainwater harvesting, solar power, EV charging, passive cooling, zero waste — EarthAroma's sustainability commitments in detail." },
+      {
+        name: "description",
+        content:
+          "Rainwater harvesting, solar power, EV charging, passive cooling, zero waste — EarthAroma's sustainability commitments in detail.",
+      },
       { property: "og:title", content: "EarthAroma Sustainability" },
-      { property: "og:description", content: "Smart + efficient homes. 100% renewable. IGBC Platinum certified." },
+      {
+        property: "og:description",
+        content: "Smart + efficient homes. 100% renewable. IGBC Platinum certified.",
+      },
     ],
   }),
   component: SustainabilityPage,
@@ -20,7 +27,15 @@ export const Route = createFileRoute("/sustainability")({
 function SustainabilityPage() {
   return (
     <>
-      <PageHeader label="Eco Intelligence" title={<>Smart + Efficient <em>Homes</em></>} intro="Sustainability isn't a feature here — it's the operating system. Every system designed to give back more than it takes." />
+      <PageHeader
+        label="Eco Intelligence"
+        title={
+          <>
+            Smart + Efficient <em>Homes</em>
+          </>
+        }
+        intro="Sustainability isn't a feature here — it's the operating system. Every system designed to give back more than it takes."
+      />
 
       <section className="bg-sand-light px-6 py-20 md:px-16">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-2">
@@ -49,7 +64,9 @@ function SustainabilityPage() {
               />
             </Link>
             <div className="absolute -bottom-6 -left-6 max-w-[200px] rounded bg-forest p-5 text-cream">
-              <div className="mb-1 text-[0.7rem] uppercase tracking-[0.14em] text-forest-pale">IGBC Status</div>
+              <div className="mb-1 text-[0.7rem] uppercase tracking-[0.14em] text-forest-pale">
+                IGBC Status
+              </div>
               <div className="font-display text-2xl text-gold-light">Platinum</div>
             </div>
           </FadeUp>
@@ -67,7 +84,9 @@ function SustainabilityPage() {
             <FadeUp key={s.label} delay={i * 0.06}>
               <div className="rounded bg-cream p-8 text-center">
                 <div className="font-display text-4xl text-forest">{s.num}</div>
-                <div className="mt-2 text-[0.7rem] uppercase tracking-[0.16em] text-ink-muted">{s.label}</div>
+                <div className="mt-2 text-[0.7rem] uppercase tracking-[0.16em] text-ink-muted">
+                  {s.label}
+                </div>
               </div>
             </FadeUp>
           ))}

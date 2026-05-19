@@ -9,9 +9,16 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Pura Vida Villas | EarthAroma" },
-      { name: "description", content: "Discover the Pura Vida philosophy — eco-luxury living, biophilic design, and a Costa Rica-inspired way of being at EarthAroma in Bengaluru." },
+      {
+        name: "description",
+        content:
+          "Discover the Pura Vida philosophy — eco-luxury living, biophilic design, and a Costa Rica-inspired way of being at EarthAroma in Bengaluru.",
+      },
       { property: "og:title", content: "About Pura Vida Villas" },
-      { property: "og:description", content: "The art of pure living — sustainability, nature, and luxury, woven into home." },
+      {
+        property: "og:description",
+        content: "The art of pure living — sustainability, nature, and luxury, woven into home.",
+      },
     ],
   }),
   component: About,
@@ -22,14 +29,24 @@ function About() {
     <>
       <PageHeader
         label="The Philosophy"
-        title={<>The Art of <em>Pure Living</em></>}
+        title={
+          <>
+            The Art of <em>Pure Living</em>
+          </>
+        }
         intro={
           <>
             Pura Vida — not just a phrase, but a way of being. At{" "}
-            <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">
+            <a
+              href={site.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-forest transition-colors"
+            >
               {site.project}
             </a>
-            , we've translated Costa Rica's relaxed, soulful ethos into architecture, community, and lifestyle.
+            , we've translated Costa Rica's relaxed, soulful ethos into architecture, community, and
+            lifestyle.
           </>
         }
       />
@@ -47,19 +64,32 @@ function About() {
           </FadeUp>
           <FadeUp delay={0.1} className="space-y-6 text-[0.95rem] leading-[1.85] text-ink-mid">
             <p>
-              In Costa Rica, <em>Pura Vida</em> means more than "pure life." It's a greeting, a reassurance, a way to
-              brush off negativity. It is the calm in the morning and the warmth in the evening. It is the river of
-              gratitude flowing through everyday moments.
+              In Costa Rica, <em>Pura Vida</em> means more than "pure life." It's a greeting, a
+              reassurance, a way to brush off negativity. It is the calm in the morning and the
+              warmth in the evening. It is the river of gratitude flowing through everyday moments.
             </p>
             <p>
-              EarthAroma takes that ethos and makes it spatial. Tall ceilings invite breath. Native gardens invite
-              pollinators. Biophilic geometry invites awe. Nothing here is decorative — every choice is rooted.
-              As a signature project within the <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.project}</a> ecosystem, Pura Vida Villas represents the pinnacle of our commitment to conscious living.
+              EarthAroma takes that ethos and makes it spatial. Tall ceilings invite breath. Native
+              gardens invite pollinators. Biophilic geometry invites awe. Nothing here is decorative
+              — every choice is rooted. As a signature project within the{" "}
+              <a
+                href={site.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-forest transition-colors"
+              >
+                {site.project}
+              </a>{" "}
+              ecosystem, Pura Vida Villas represents the pinnacle of our commitment to conscious
+              living.
             </p>
             <p>
-              Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't an escape — it's home.
+              Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't an escape —
+              it's home.
             </p>
-            <Link to="/sustainability" className="btn-outline-forest mt-2 inline-block">Our Sustainability →</Link>
+            <Link to="/sustainability" className="btn-outline-forest mt-2 inline-block">
+              Our Sustainability →
+            </Link>
           </FadeUp>
         </div>
       </section>
@@ -67,9 +97,21 @@ function About() {
       <section className="bg-sand-light px-6 py-20 md:px-16">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 md:grid-cols-3">
           {[
-            { num: "01", title: "Vision", body: "Eco-luxury homes that do more for the planet than they take from it." },
-            { num: "02", title: "Community", body: "A neighborhood where every villa shares the same breathing landscape." },
-            { num: "03", title: "Craft", body: "Italian marble, teakwood, biodynamic gardens — uncompromising materials, gently sourced." },
+            {
+              num: "01",
+              title: "Vision",
+              body: "Eco-luxury homes that do more for the planet than they take from it.",
+            },
+            {
+              num: "02",
+              title: "Community",
+              body: "A neighborhood where every villa shares the same breathing landscape.",
+            },
+            {
+              num: "03",
+              title: "Craft",
+              body: "Italian marble, teakwood, biodynamic gardens — uncompromising materials, gently sourced.",
+            },
           ].map((c, i) => (
             <FadeUp key={c.num} delay={i * 0.08}>
               <div className="font-display text-5xl font-light text-gold">{c.num}</div>
@@ -91,15 +133,22 @@ function About() {
               </h2>
               <div className="mt-8 space-y-6 text-[0.95rem] leading-[1.85] text-ink-mid">
                 <p>
-                  Parisara's Earth Aroma is a 20-acre lakefront plotted community launched in 2023 and now delivered with a Completion Certificate obtained in March 2026.
+                  Parisara's Earth Aroma is a 20-acre lakefront plotted community launched in 2023
+                  and now delivered with a Completion Certificate obtained in March 2026.
                 </p>
                 <p>
-                  {site.developer} is more than a developer—they are curators of conscious communities with a focus on sustainable luxury, value for money, and large open spaces with additional extra space offered to breathe, play, and live comfortably.
+                  {site.developer} is more than a developer—they are curators of conscious
+                  communities with a focus on sustainable luxury, value for money, and large open
+                  spaces with additional extra space offered to breathe, play, and live comfortably.
                 </p>
                 <p>
-                  Every project under the Parisara banner is guided by the principle of "Life in Harmony." From the preservation of local flora to the integration of advanced renewable energy systems, we ensure that our impact on the earth is as beautiful as the homes we build. The developer has been in business since 2012, with their first project delivered in 2015.
+                  Every project under the Parisara banner is guided by the principle of "Life in
+                  Harmony." From the preservation of local flora to the integration of advanced
+                  renewable energy systems, we ensure that our impact on the earth is as beautiful
+                  as the homes we build. The developer has been in business since 2012, with their
+                  first project delivered in 2015.
                 </p>
-                
+
                 <div className="mt-8">
                   <h4 className="font-display text-lg text-forest mb-4">Our Track Record</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
@@ -110,7 +159,7 @@ function About() {
                       "Gem Food Park – Davanagere",
                       "Apollo Hospital Sheshadripuram",
                       "Cloud9 Hospitals, Old Airport Road",
-                      "Earth Aroma @ IVC Road, Devanhalli"
+                      "Earth Aroma @ IVC Road, Devanhalli",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3 text-ink-mid">
                         <div className="mt-2 h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
@@ -120,10 +169,10 @@ function About() {
                   </ul>
                 </div>
 
-                <a 
-                  href={site.projectUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={site.projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-outline-forest mt-4 inline-block"
                 >
                   Visit EarthAroma Website →
@@ -190,10 +239,10 @@ function About() {
               />
             </div>
             <div className="mt-8 text-center">
-              <a 
-                href="https://maps.app.goo.gl/W4H2Uowyqry6wLBx8" 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href="https://maps.app.goo.gl/W4H2Uowyqry6wLBx8"
+                target="_blank"
+                rel="noreferrer"
                 className="btn-outline-forest"
               >
                 Open in Google Maps →

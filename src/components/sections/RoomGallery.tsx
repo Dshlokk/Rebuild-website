@@ -89,9 +89,7 @@ export function RoomGallery() {
 
           <div className="mt-8 md:col-span-2">
             <h3 className="font-display text-2xl text-forest">{room.sub}</h3>
-            <p className="mt-2 max-w-3xl text-[0.9rem] leading-[1.75] text-ink-mid">
-              {room.body}
-            </p>
+            <p className="mt-2 max-w-3xl text-[0.9rem] leading-[1.75] text-ink-mid">{room.body}</p>
           </div>
         </motion.div>
       </AnimatePresence>

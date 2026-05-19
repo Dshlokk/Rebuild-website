@@ -1,10 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-} from "@tanstack/react-router";
+import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
 
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
@@ -17,8 +12,12 @@ function NotFoundComponent() {
       <div className="max-w-md text-center">
         <h1 className="font-display text-7xl font-light text-forest">404</h1>
         <h2 className="mt-3 font-display text-xl text-forest">Lost in the woods</h2>
-        <p className="mt-2 text-sm text-ink-muted">The page you're looking for doesn't exist or has moved.</p>
-        <Link to="/" className="btn-outline-forest mt-6 inline-block">Return Home</Link>
+        <p className="mt-2 text-sm text-ink-muted">
+          The page you're looking for doesn't exist or has moved.
+        </p>
+        <Link to="/" className="btn-outline-forest mt-6 inline-block">
+          Return Home
+        </Link>
       </div>
     </div>
   );
@@ -33,8 +32,18 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <h1 className="font-display text-2xl text-forest">Something went wrong</h1>
         <p className="mt-2 text-sm text-ink-muted">{error.message}</p>
         <div className="mt-6 flex justify-center gap-2">
-          <button onClick={() => { router.invalidate(); reset(); }} className="btn-outline-forest">Try again</button>
-          <a href="/" className="btn-outline-forest">Home</a>
+          <button
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
+            className="btn-outline-forest"
+          >
+            Try again
+          </button>
+          <a href="/" className="btn-outline-forest">
+            Home
+          </a>
         </div>
       </div>
     </div>

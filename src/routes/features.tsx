@@ -9,9 +9,16 @@ export const Route = createFileRoute("/features")({
   head: () => ({
     meta: [
       { title: "Features — Pura Vida Villas | Smart Eco-Luxury Homes" },
-      { name: "description", content: "Vastu compliant, solar ready, biophilic, smart home automation, IGBC Platinum — every feature crafted for elevated, responsible living." },
+      {
+        name: "description",
+        content:
+          "Vastu compliant, solar ready, biophilic, smart home automation, IGBC Platinum — every feature crafted for elevated, responsible living.",
+      },
       { property: "og:title", content: "EarthAroma Features" },
-      { property: "og:description", content: "#RootedInResponsibility — every detail engineered for purpose." },
+      {
+        property: "og:description",
+        content: "#RootedInResponsibility — every detail engineered for purpose.",
+      },
     ],
   }),
   component: FeaturesPage,
@@ -29,7 +36,11 @@ function FeaturesPage() {
     <>
       <PageHeader
         label="Key Highlights"
-        title={<>#RootedIn<em>Responsibility</em></>}
+        title={
+          <>
+            #RootedIn<em>Responsibility</em>
+          </>
+        }
         intro="Every feature reflects intent — from glass capsule lifts and smart automation to Vastu-aligned layouts and 100% renewable power."
       />
 
@@ -43,7 +54,14 @@ function FeaturesPage() {
                 className="rounded border border-sand/30 bg-cream p-6 transition-all hover:-translate-y-1 hover:border-forest-light hover:shadow-[0_4px_24px_rgba(45,74,45,0.10)]"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-cream-dark bg-white">
-                  <svg viewBox="0 0 24 24" className="h-6 w-6 stroke-forest" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6 stroke-forest"
+                    fill="none"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d={f.path} />
                   </svg>
                 </div>
@@ -61,7 +79,9 @@ function FeaturesPage() {
             <FadeUp key={s.label} delay={i * 0.06}>
               <div className="rounded bg-white p-8 text-center">
                 <div className="font-display text-5xl font-light text-forest">{s.num}</div>
-                <div className="mt-2 text-[0.7rem] uppercase tracking-[0.16em] text-ink-muted">{s.label}</div>
+                <div className="mt-2 text-[0.7rem] uppercase tracking-[0.16em] text-ink-muted">
+                  {s.label}
+                </div>
               </div>
             </FadeUp>
           ))}
@@ -71,8 +91,12 @@ function FeaturesPage() {
       <section className="bg-forest px-6 py-24 md:px-16">
         <div className="mx-auto max-w-6xl">
           <FadeUp>
-            <div className="section-label" style={{ color: "var(--forest-pale)" }}>Certification</div>
-            <h2 className="section-title text-cream max-w-xl">IGBC <em>Platinum</em> — Pillar by Pillar</h2>
+            <div className="section-label" style={{ color: "var(--forest-pale)" }}>
+              Certification
+            </div>
+            <h2 className="section-title text-cream max-w-xl">
+              IGBC <em>Platinum</em> — Pillar by Pillar
+            </h2>
           </FadeUp>
           <Stagger>
             <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -82,7 +106,9 @@ function FeaturesPage() {
                   variants={staggerItem}
                   className="rounded border border-forest-pale/20 bg-white/5 p-6 transition-all hover:-translate-y-1 hover:bg-white/10"
                 >
-                  <div className="mb-3 font-display text-4xl font-light text-gold-light">{c.num}</div>
+                  <div className="mb-3 font-display text-4xl font-light text-gold-light">
+                    {c.num}
+                  </div>
                   <div className="mb-1 text-[0.85rem] font-medium text-cream">{c.title}</div>
                   <div className="text-[0.78rem] leading-[1.65] text-forest-pale/70">{c.body}</div>
                 </motion.div>

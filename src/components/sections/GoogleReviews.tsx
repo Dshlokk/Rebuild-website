@@ -45,11 +45,7 @@ export function GoogleReviews() {
               {/* Rating */}
               <div className="flex gap-1 mb-4">
                 {[...Array(r.rating)].map((_, i) => (
-                  <svg
-                    key={i}
-                    viewBox="0 0 24 24"
-                    className="h-4 w-4 fill-gold text-gold"
-                  >
+                  <svg key={i} viewBox="0 0 24 24" className="h-4 w-4 fill-gold text-gold">
                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                   </svg>
                 ))}
@@ -69,9 +65,7 @@ export function GoogleReviews() {
                   <div className="text-[0.82rem] font-medium text-forest uppercase tracking-wider">
                     {r.name}
                   </div>
-                  <div className="text-[0.7rem] text-ink-muted">
-                    {r.date}
-                  </div>
+                  <div className="text-[0.7rem] text-ink-muted">{r.date}</div>
                 </div>
               </div>
             </div>

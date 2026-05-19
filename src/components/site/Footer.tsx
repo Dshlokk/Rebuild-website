@@ -6,37 +6,56 @@ export function Footer() {
     <footer className="bg-ink px-6 pb-8 pt-12 text-cream md:px-16">
       <div className="mb-10 grid grid-cols-1 gap-8 md:grid-cols-[1.5fr_1fr_1fr_1fr] md:gap-12">
         <div>
-          <img 
-            src="/logo.png" 
-            alt={site.name} 
+          <img
+            src="/logo.png"
+            alt={site.name}
             className="mb-4 h-10 w-auto object-contain brightness-0 invert"
           />
           <p className="text-[0.78rem] leading-[1.7] text-ink-muted">
-            An eco-luxury community at <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-cream transition-colors">{site.project}</a>, inspired by the Costa Rican way of life. IGBC Platinum
-            Certified. {site.location}.
+            An eco-luxury community at{" "}
+            <a
+              href={site.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-cream transition-colors"
+            >
+              {site.project}
+            </a>
+            , inspired by the Costa Rican way of life. IGBC Platinum Certified. {site.location}.
           </p>
         </div>
-        <FooterCol title="Explore" links={[
-          { label: "About", to: "/about" },
-          { label: "Features", to: "/features" },
-          { label: "Gallery", to: "/gallery" },
-          { label: "Amenities", to: "/amenities" },
-        ]} />
-        <FooterCol title="Information" links={[
-          { label: "Floor Plans", to: "/floor-plans" },
-          { label: "Sustainability", to: "/sustainability" },
-          { label: "Brochure & Specs", to: "/contact" },
-          { label: "Contact", to: "/contact" },
-        ]} />
-        <FooterCol title="Legal" links={[
-          { label: "Privacy Policy", to: "/privacy" },
-          { label: "Terms of Use", to: "/terms" },
-          { label: "Disclaimer", to: "/disclaimer" },
-        ]} />
+        <FooterCol
+          title="Explore"
+          links={[
+            { label: "About", to: "/about" },
+            { label: "Features", to: "/features" },
+            { label: "Gallery", to: "/gallery" },
+            { label: "Amenities", to: "/amenities" },
+          ]}
+        />
+        <FooterCol
+          title="Information"
+          links={[
+            { label: "Floor Plans", to: "/floor-plans" },
+            { label: "Sustainability", to: "/sustainability" },
+            { label: "Brochure & Specs", to: "/contact" },
+            { label: "Contact", to: "/contact" },
+          ]}
+        />
+        <FooterCol
+          title="Legal"
+          links={[
+            { label: "Privacy Policy", to: "/privacy" },
+            { label: "Terms of Use", to: "/terms" },
+            { label: "Disclaimer", to: "/disclaimer" },
+          ]}
+        />
       </div>
       <div className="flex flex-col items-start justify-between gap-2 border-t border-white/10 pt-6 text-[0.7rem] text-ink-muted md:flex-row md:items-center">
         <div className="space-y-1">
-          <p>© 2025 {site.project} · {site.name}. All rights reserved.</p>
+          <p>
+            © 2025 {site.project} · {site.name}. All rights reserved.
+          </p>
           <p>RERA PRM/KA/RERA/1250/303/PR/030822/005130</p>
         </div>
         <p>Designed with intention. Built with purpose.</p>

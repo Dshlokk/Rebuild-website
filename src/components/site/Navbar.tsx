@@ -21,11 +21,7 @@ export function Navbar() {
       <div className="w-8 md:hidden" />
 
       <Link to="/" className="flex flex-col items-center gap-0">
-        <img 
-          src="/logo.png" 
-          alt={site.name} 
-          className="h-20 w-auto object-contain md:h-24"
-        />
+        <img src="/logo.png" alt={site.name} className="h-20 w-auto object-contain md:h-24" />
         <span className="text-[0.55rem] uppercase tracking-[0.2em] text-gold/80 -mt-1 font-medium">
           [Official Website]
         </span>
@@ -55,7 +51,14 @@ export function Navbar() {
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
           {open ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
         </svg>
       </button>

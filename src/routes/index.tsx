@@ -48,12 +48,17 @@ function Index() {
                 />
               </FadeUp>
             </Link>
-            <Link 
-              to="/gallery" 
+            <Link
+              to="/gallery"
               className="mt-6 flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-widest text-forest hover:text-gold transition-colors md:hidden"
             >
               Click to View Gallery
-              <svg viewBox="0 0 24 24" className="h-4 w-4 stroke-current" fill="none" strokeWidth="2">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 stroke-current"
+                fill="none"
+                strokeWidth="2"
+              >
                 <path d="M5 12h14m-7-7l7 7-7 7" />
               </svg>
             </Link>
@@ -70,9 +75,18 @@ function Index() {
             </p>
             <p className="text-[0.93rem] leading-[1.85] text-ink-mid">
               In Costa Rica, <em>Pura Vida</em> represents the relaxed, active attitude toward life.
-              At <a href={site.projectUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-forest transition-colors">{site.project}</a>, we've translated this ethos into architecture, community, and
-              lifestyle. Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't
-              an escape — it's simply home.
+              At{" "}
+              <a
+                href={site.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-forest transition-colors"
+              >
+                {site.project}
+              </a>
+              , we've translated this ethos into architecture, community, and lifestyle.
+              Sustainability isn't a feature. Nature isn't an amenity. And luxury isn't an escape —
+              it's simply home.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-3 xs:grid-cols-3">
               {[
@@ -194,7 +208,7 @@ function Index() {
                   height={800}
                 />
               </Link>
-              
+
               {/* Always Visible Overlay */}
               <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-6 text-center">
                 <div className="mb-6 transform transition-transform duration-500 group-hover:scale-105">
@@ -202,10 +216,11 @@ function Index() {
                     Zoom & Explore Details
                   </h3>
                   <p className="text-white/90 text-[0.85rem] md:text-[0.95rem] max-w-sm mx-auto leading-relaxed [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">
-                    For high-resolution details and site layouts, download the complete brochure pack.
+                    For high-resolution details and site layouts, download the complete brochure
+                    pack.
                   </p>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                   <Link
                     to="/contact"
