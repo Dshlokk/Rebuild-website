@@ -5,6 +5,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { FloatIcons } from "@/components/site/FloatIcons";
 import { LeadPopup } from "@/components/site/LeadPopup";
+import { ChatBot } from "@/components/site/ChatBot";
 
 function NotFoundComponent() {
   return (
@@ -76,6 +77,7 @@ function RootComponent() {
       <Navbar />
       <FloatIcons />
       <LeadPopup />
+      <ChatBot />
       <main className="min-h-screen">
         <Outlet />
       </main>
