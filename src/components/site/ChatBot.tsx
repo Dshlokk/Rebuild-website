@@ -55,6 +55,14 @@ export function ChatBot() {
   ];
 
   useEffect(() => {
+    // Auto-open chatbot after 15 seconds
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 15000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     if (isOpen && messages.length === 0) {
       setMessages([
         {

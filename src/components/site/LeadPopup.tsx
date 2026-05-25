@@ -3,16 +3,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { saveLead } from "@/lib/leads";
 import { site } from "@/data/site";
 import { X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function LeadPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [submitting, setSubmitting] = useState<"idle" | "sending" | "sent">("idle");
+  const isMobile = useIsMobile();
 
   useEffect(() => {
+    if (isMobile) return;
     // Show popup after 3 seconds on every mount
     const timer = setTimeout(() => setIsOpen(true), 3000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isMobile]);
 
   const closePopup = () => {
     setIsOpen(false);

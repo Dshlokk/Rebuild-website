@@ -56,26 +56,6 @@ export function FloatIcons() {
           </a>
         ))}
       </div>
-
-      {/* Mobile Floating Buttons */}
-      <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3 md:hidden">
-        <a
-          href={site.whatsapp}
-          target="_blank"
-          rel="noreferrer"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_rgba(37,211,102,0.4)] transition-transform active:scale-90"
-          aria-label="WhatsApp"
-        >
-          <MessageCircle className="h-6 w-6 stroke-white" fill="none" strokeWidth={2} />
-        </a>
-        <a
-          href={site.phoneHref}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-forest text-white shadow-[0_4px_12px_rgba(44,76,59,0.4)] transition-transform active:scale-90"
-          aria-label="Call"
-        >
-          <Phone className="h-5 w-5 stroke-white" fill="none" strokeWidth={2} />
-        </a>
-      </div>
     </>
   );
 }
