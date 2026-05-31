@@ -28,7 +28,7 @@ const items = [
 
 export function FloatIcons() {
   return (
-    <div className="fixed inset-x-0 bottom-6 z-40 flex justify-center px-4 pointer-events-none md:inset-y-0 md:right-6 md:left-auto md:bottom-auto md:flex-col md:items-center md:justify-center md:px-0">
+    <div className="fixed inset-x-0 bottom-6 z-40 flex justify-center px-4 pointer-events-none md:inset-y-0 md:right-6 md:left-auto md:bottom-12 md:top-auto md:flex-col md:items-center md:justify-end md:px-0">
       <div className="flex items-center justify-center gap-1 overflow-hidden rounded-[24px] border border-white/40 bg-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-[16px] backdrop-saturate-[180%] px-2 py-1.5 pointer-events-auto md:flex-col md:px-2 md:py-6 md:gap-2">
         {items.map((it) => (
           <a
