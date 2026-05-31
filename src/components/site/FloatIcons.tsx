@@ -28,21 +28,19 @@ const items = [
 
 export function FloatIcons() {
   return (
-    <>
-      {/* Desktop Floating Bar */}
-      <div className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col overflow-hidden rounded-l-[20px] border border-r-0 border-white/40 bg-white/45 shadow-[-4px_8px_24px_rgba(0,0,0,0.08)] backdrop-blur-[16px] backdrop-saturate-[180%] md:flex">
+    <div className="fixed inset-x-0 bottom-6 z-40 flex justify-center px-4 pointer-events-none md:inset-y-0 md:right-6 md:left-auto md:bottom-auto md:flex-col md:items-center md:justify-center md:px-0">
+      <div className="flex items-center justify-center gap-1 overflow-hidden rounded-[24px] border border-white/40 bg-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.12)] backdrop-blur-[16px] backdrop-saturate-[180%] px-2 py-1.5 pointer-events-auto md:flex-col md:px-2 md:py-6 md:gap-2">
         {items.map((it) => (
           <a
             key={it.label}
             href={it.href}
             target={it.ext ? "_blank" : undefined}
             rel={it.ext ? "noreferrer" : undefined}
-            className="group relative flex h-[72px] w-[64px] flex-col items-center justify-center gap-1.5 border-b border-white/20 transition-all last:border-b-0 hover:bg-white/20"
-            title={it.label}
+            className="group flex flex-col items-center justify-center gap-1 px-3 py-1 text-[#2c4c3b] transition-all hover:scale-110 md:px-2 md:py-3"
           >
             <svg
               viewBox="0 0 24 24"
-              className="h-5 w-5 stroke-[#2c4c3b] transition-transform duration-300 group-hover:scale-110"
+              className="h-5 w-5 stroke-current transition-transform duration-300 group-hover:-translate-y-0.5 md:h-6 md:w-6"
               fill="none"
               strokeWidth="1.5"
               strokeLinecap="round"
@@ -50,12 +48,12 @@ export function FloatIcons() {
             >
               <path d={it.d} />
             </svg>
-            <span className="text-[0.62rem] font-medium uppercase tracking-[0.05em] text-[#2c4c3b]/90 transition-colors">
+            <span className="text-[0.5rem] font-bold uppercase tracking-[0.05em] opacity-80 md:text-[0.55rem]">
               {it.label}
             </span>
           </a>
         ))}
       </div>
-    </>
+    </div>
   );
 }

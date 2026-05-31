@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  MessageCircle, 
-  X, 
-  Send, 
-  Calendar, 
-  Download, 
-  Phone, 
+import {
+  MessageCircle,
+  X,
+  Send,
+  Calendar,
+  Download,
+  Phone,
   ChevronRight,
   Bot,
-  User
+  User,
 } from "lucide-react";
 import { site } from "@/data/site";
 import { features, sustainability } from "@/data/features";
@@ -27,14 +27,40 @@ type Message = {
 };
 
 const KNOWLEDGE_BASE = [
-  ...features.map(f => ({ keywords: [f.title.toLowerCase(), "feature"], answer: `${f.title}: ${f.body}` })),
-  ...sustainability.map(s => ({ keywords: [s.title.toLowerCase(), "sustainable", "eco"], answer: `${s.title}: ${s.body}` })),
-  ...sportAmenities.map(a => ({ keywords: [a.name.toLowerCase(), "sport", "amenity"], answer: `We have a ${a.name} as part of our sports amenities.` })),
-  ...wellnessAmenities.map(a => ({ keywords: [a.name.toLowerCase(), "wellness", "amenity"], answer: `Our wellness features include a ${a.name}.` })),
-  { keywords: ["price", "cost", "investment"], answer: "Our villas starting from 3600 sq.ft offer premium luxury. For detailed pricing and current offers, please call our executive or schedule a visit." },
-  { keywords: ["location", "where", "address"], answer: `Pura Vida Villas is located at ${site.location}. It's a prime lakefront community.` },
-  { keywords: ["size", "area", "sqft"], answer: "The villas are approximately 3600 Sq.Ft. featuring biophilic design and Vastu compliance." },
-  { keywords: ["contact", "phone", "number"], answer: `You can reach us at ${site.phone} or via WhatsApp.` },
+  ...features.map((f) => ({
+    keywords: [f.title.toLowerCase(), "feature"],
+    answer: `${f.title}: ${f.body}`,
+  })),
+  ...sustainability.map((s) => ({
+    keywords: [s.title.toLowerCase(), "sustainable", "eco"],
+    answer: `${s.title}: ${s.body}`,
+  })),
+  ...sportAmenities.map((a) => ({
+    keywords: [a.name.toLowerCase(), "sport", "amenity"],
+    answer: `We have a ${a.name} as part of our sports amenities.`,
+  })),
+  ...wellnessAmenities.map((a) => ({
+    keywords: [a.name.toLowerCase(), "wellness", "amenity"],
+    answer: `Our wellness features include a ${a.name}.`,
+  })),
+  {
+    keywords: ["price", "cost", "investment"],
+    answer:
+      "Our villas starting from 3600 sq.ft offer premium luxury. For detailed pricing and current offers, please call our executive or schedule a visit.",
+  },
+  {
+    keywords: ["location", "where", "address"],
+    answer: `Pura Vida Villas is located at ${site.location}. It's a prime lakefront community.`,
+  },
+  {
+    keywords: ["size", "area", "sqft"],
+    answer:
+      "The villas are approximately 3600 Sq.Ft. featuring biophilic design and Vastu compliance.",
+  },
+  {
+    keywords: ["contact", "phone", "number"],
+    answer: `You can reach us at ${site.phone} or via WhatsApp.`,
+  },
 ];
 
 export function ChatBot() {
@@ -48,10 +74,26 @@ export function ChatBot() {
   const BROCHURE_LINK = "/EA-Villa-Brochure-3.pdf";
 
   const initialActions = [
-    { label: "Ask a Question", onClick: () => handleAction("query"), icon: <MessageCircle className="h-4 w-4" /> },
-    { label: "Schedule Visit", onClick: () => window.open(VISIT_LINK, "_blank"), icon: <Calendar className="h-4 w-4" /> },
-    { label: "Download Brochure", onClick: () => window.open(BROCHURE_LINK, "_blank"), icon: <Download className="h-4 w-4" /> },
-    { label: "Call Executive", onClick: () => window.open(site.whatsapp, "_blank"), icon: <Phone className="h-4 w-4" /> },
+    {
+      label: "Ask a Question",
+      onClick: () => handleAction("query"),
+      icon: <MessageCircle className="h-4 w-4" />,
+    },
+    {
+      label: "Schedule Visit",
+      onClick: () => window.open(VISIT_LINK, "_blank"),
+      icon: <Calendar className="h-4 w-4" />,
+    },
+    {
+      label: "Download Brochure",
+      onClick: () => window.open(BROCHURE_LINK, "_blank"),
+      icon: <Download className="h-4 w-4" />,
+    },
+    {
+      label: "Call Executive",
+      onClick: () => window.open(site.whatsapp, "_blank"),
+      icon: <Phone className="h-4 w-4" />,
+    },
   ];
 
   useEffect(() => {
@@ -70,8 +112,8 @@ export function ChatBot() {
           role: "bot",
           content: "Hello! I'm Pura Vida's Virtual Assistant. How can I help you today?",
           timestamp: new Date(),
-          actions: initialActions
-        }
+          actions: initialActions,
+        },
       ]);
     }
   }, [isOpen]);
@@ -84,11 +126,18 @@ export function ChatBot() {
 
   const handleAction = (type: string) => {
     if (type === "query") {
-      addMessage("bot", "I can tell you about our amenities, features, location, and more! What would you like to know?", [
-        { label: "What are the amenities?", onClick: () => handleQuery("What are the amenities?") },
-        { label: "Where is it located?", onClick: () => handleQuery("Where is it located?") },
-        { label: "Villa size?", onClick: () => handleQuery("How big are the villas?") },
-      ]);
+      addMessage(
+        "bot",
+        "I can tell you about our amenities, features, location, and more! What would you like to know?",
+        [
+          {
+            label: "What are the amenities?",
+            onClick: () => handleQuery("What are the amenities?"),
+          },
+          { label: "Where is it located?", onClick: () => handleQuery("Where is it located?") },
+          { label: "Villa size?", onClick: () => handleQuery("How big are the villas?") },
+        ],
+      );
     }
   };
 
@@ -98,14 +147,14 @@ export function ChatBot() {
       role,
       content,
       timestamp: new Date(),
-      actions
+      actions,
     };
-    setMessages(prev => [...prev, newMessage]);
+    setMessages((prev) => [...prev, newMessage]);
   };
 
   const handleQuery = (query: string) => {
     setInputValue(query);
-    // Use a timeout to allow the input value to be set before sending, 
+    // Use a timeout to allow the input value to be set before sending,
     // or just call handleSend directly with the query.
     setTimeout(() => {
       processQuery(query);
@@ -120,8 +169,16 @@ export function ChatBot() {
     setTimeout(() => {
       const response = findResponse(query);
       addMessage("bot", response, [
-        { label: "Schedule Visit", onClick: () => window.open(VISIT_LINK, "_blank"), icon: <Calendar className="h-4 w-4" /> },
-        { label: "Call Executive", onClick: () => window.open(site.whatsapp, "_blank"), icon: <Phone className="h-4 w-4" /> },
+        {
+          label: "Schedule Visit",
+          onClick: () => window.open(VISIT_LINK, "_blank"),
+          icon: <Calendar className="h-4 w-4" />,
+        },
+        {
+          label: "Call Executive",
+          onClick: () => window.open(site.whatsapp, "_blank"),
+          icon: <Phone className="h-4 w-4" />,
+        },
       ]);
       setIsTyping(false);
     }, 1000);
@@ -134,11 +191,9 @@ export function ChatBot() {
 
   const findResponse = (query: string): string => {
     const q = query.toLowerCase();
-    
+
     // Simple matching logic
-    const matches = KNOWLEDGE_BASE.filter(k => 
-      k.keywords.some(word => q.includes(word))
-    );
+    const matches = KNOWLEDGE_BASE.filter((k) => k.keywords.some((word) => q.includes(word)));
 
     if (matches.length > 0) {
       return matches[0].answer;
@@ -148,7 +203,7 @@ export function ChatBot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end">
+    <div className="fixed bottom-[100px] right-6 z-[60] flex flex-col items-end md:bottom-6 md:right-6">
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -171,7 +226,7 @@ export function ChatBot() {
                   </div>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="rounded-full p-1 transition-colors hover:bg-white/10"
               >
@@ -183,19 +238,23 @@ export function ChatBot() {
             <ScrollArea className="flex-1 p-4" viewportRef={scrollRef}>
               <div className="flex flex-col gap-4">
                 {messages.map((msg) => (
-                  <div 
-                    key={msg.id} 
+                  <div
+                    key={msg.id}
                     className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                   >
-                    <div className={`flex max-w-[85%] flex-col gap-2 ${msg.role === "user" ? "items-end" : "items-start"}`}>
-                      <div className={`rounded-2xl px-4 py-2.5 text-sm ${
-                        msg.role === "user" 
-                          ? "bg-forest text-white rounded-tr-none" 
-                          : "bg-slate-100 text-slate-800 rounded-tl-none"
-                      }`}>
+                    <div
+                      className={`flex max-w-[85%] flex-col gap-2 ${msg.role === "user" ? "items-end" : "items-start"}`}
+                    >
+                      <div
+                        className={`rounded-2xl px-4 py-2.5 text-sm ${
+                          msg.role === "user"
+                            ? "bg-forest text-white rounded-tr-none"
+                            : "bg-slate-100 text-slate-800 rounded-tl-none"
+                        }`}
+                      >
                         {msg.content}
                       </div>
-                      
+
                       {msg.actions && (
                         <div className="mt-1 flex flex-wrap gap-2">
                           {msg.actions.map((action, i) => (
@@ -217,9 +276,18 @@ export function ChatBot() {
                   <div className="flex justify-start">
                     <div className="rounded-2xl bg-slate-100 px-4 py-2.5 rounded-tl-none">
                       <div className="flex gap-1">
-                        <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400" style={{ animationDelay: "0ms" }} />
-                        <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400" style={{ animationDelay: "150ms" }} />
-                        <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400" style={{ animationDelay: "300ms" }} />
+                        <span
+                          className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400"
+                          style={{ animationDelay: "0ms" }}
+                        />
+                        <span
+                          className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400"
+                          style={{ animationDelay: "150ms" }}
+                        />
+                        <span
+                          className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400"
+                          style={{ animationDelay: "300ms" }}
+                        />
                       </div>
                     </div>
                   </div>
@@ -229,19 +297,22 @@ export function ChatBot() {
 
             {/* Input Area */}
             <div className="border-t border-slate-100 p-4 bg-slate-50/50">
-              <form 
-                onSubmit={(e) => { e.preventDefault(); handleSend(); }}
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSend();
+                }}
                 className="flex gap-2"
               >
-                <Input 
+                <Input
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Ask a question..."
                   className="h-10 border-slate-200 bg-white focus-visible:ring-forest"
                 />
-                <Button 
-                  type="submit" 
-                  size="icon" 
+                <Button
+                  type="submit"
+                  size="icon"
                   disabled={!inputValue.trim() || isTyping}
                   className="h-10 w-10 shrink-0 bg-forest hover:bg-forest/90"
                 >
